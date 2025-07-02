@@ -903,6 +903,10 @@
   }
 }
 @media screen and (min-width: 1400px) {
+  .container-xxl{
+    max-width: 100%;
+  }
+
   .font1 {
     font-size: 11px;
   }
@@ -995,3 +999,132 @@
     font-size: 12px;
   }
 }/*# sourceMappingURL=local.css.map */
+
+.related-items-section {
+    background-color: #E3E6E6; /* Sesuaikan dengan warna latar belakang main section Anda */
+    position: relative; 
+    z-index: 1; 
+    padding-bottom: 20px; /* Tambahkan padding bawah agar ada ruang ke elemen selanjutnya */
+    padding-left: 5px !important;
+    padding-right: 5px !important;
+    /* margin-top akan disesuaikan di media queries di bawah */
+}
+
+.section-cont{
+  padding-top: 20px !important;
+  padding-left: 0 !important;
+  padding-right: 0 !important;
+  background-color: white;
+}
+
+.related-items-title {
+    font-size: 1.5rem; 
+    font-weight: 700;
+    margin-bottom: 15px;
+    padding-left: 10px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: #0F1111; 
+}
+
+.related-items-title .see-more-link {
+    font-size: 0.9rem;
+    color: #007185; 
+    text-decoration: none;
+    white-space: nowrap; 
+}
+
+.related-items-title .see-more-link:hover {
+    color: #c7511f; 
+    text-decoration: underline;
+}
+
+.related-items-carousel-container {
+    position: relative;
+    display: flex;
+    align-items: center;
+    padding: 0 5px; 
+}
+
+.related-items-wrapper {
+    display: flex;
+    flex-wrap: nowrap; 
+    overflow-x: scroll; 
+    -webkit-overflow-scrolling: touch; 
+    scrollbar-width: none; 
+    -ms-overflow-style: none;  
+    padding: 10px 0; 
+    background-color: white; 
+    box-shadow: 0 1px 3px rgba(0,0,0,0.1); 
+    padding-left: 10px; 
+    padding-right: 10px; 
+}
+
+.related-items-wrapper::-webkit-scrollbar {
+    display: none; 
+}
+
+.related-item-card {
+    flex: 0 0 auto;  /* Lebar default setiap item (akan disesuaikan di media query) */
+    margin: 0 8px; 
+    padding: 10px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start; 
+    /* min-height akan disesuaikan di media queries */
+}
+
+.related-item-card img {
+    width: 273px;
+    height: 273px;
+    margin-bottom: 10px;
+    flex-shrink: 0; 
+}
+
+.item-description {
+    font-size: 0.85rem;
+    color: #0F1111;
+    margin-top: auto; 
+    line-height: 1.3;
+}
+
+/* Styles for carousel arrows */
+.carousel-arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(255, 255, 255, 0.85); 
+    border: 1px solid #ddd;
+    width: 45px;
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    z-index: 10;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+    font-size: 1.4rem;
+    color: #0F1111;
+    transition: background-color 0.2s, border-color 0.2s;
+}
+
+.carousel-arrow.left-arrow {
+    left: 0px; 
+}
+
+.carousel-arrow.right-arrow {
+    right: 0px; 
+}
+
+.carousel-arrow:hover {
+    background-color: rgba(255, 255, 255, 1);
+    border-color: #999;
+}
+
+
+/* --- Media Queries untuk Responsivitas - GABUNGKAN INI KE MEDIA QUERIES YANG SUDAH ADA --- */
+
+/* @media screen and (max-width: 576px) */
