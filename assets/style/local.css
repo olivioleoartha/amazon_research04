@@ -1059,7 +1059,7 @@
 .related-items-wrapper {
     display: flex;
     flex-wrap: nowrap; 
-    overflow-x: hidden; 
+    overflow-x: scroll; 
     -webkit-overflow-scrolling: touch; 
     scrollbar-width: none; 
     -ms-overflow-style: none;  
