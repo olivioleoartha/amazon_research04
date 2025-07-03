@@ -120,3 +120,17 @@ function topFunction() {
     document.body.scrollTop = 0; // Untuk Safari
     document.documentElement.scrollTop = 0; // Untuk Chrome, Firefox, IE, dan Opera
 }
+
+let lastScrollY = window.scrollY;
+const header1 = document.getElementById('header1'); // Get the header 1 element
+
+window.addEventListener('scroll', () => {
+    if (window.scrollY < lastScrollY) {
+        // Scrolling up
+        header1.style.transform = 'translateY(0)'; // Make it visible
+    } else {
+        // Scrolling down
+        header1.style.transform = 'translateY(-100%)'; // Hide it by moving it up
+    }
+    lastScrollY = window.scrollY;
+});

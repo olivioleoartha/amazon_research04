@@ -809,6 +809,10 @@
   #x {
     left: 375px;
   }
+  #head2{
+    margin-top: 65px;
+  }
+
   #head2 div {
     height: 42px !important;
   }
@@ -933,6 +937,11 @@
   }
   #header1 {
     height: 65px;
+    transition: transform 0.3s ease-in-out;
+    position: fixed; 
+    width: 100%;
+    top: 0;
+    z-index: 1000; 
   }
   #foot2 > div div a {
     color: white;
