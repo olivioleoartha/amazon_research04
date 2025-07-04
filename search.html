@@ -1,0 +1,862 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="assets/style/global.css">
+    <link rel="stylesheet" href="assets/style/local.css">
+    <link rel="stylesheet" href="assets/style/local2.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/noUiSlider/15.7.0/nouislider.min.css" rel="stylesheet">
+
+
+    <title>Amazon Search Results - Headphones</title>
+</head>
+<body>
+    <main id="_top" class="container-fluid p-0 m-0">
+        <section class="container-fluid p-0 m-0">
+            <header class="container-fluid p-0 m-0">
+                <div id="header1" class="container-fluid p-0 m-0 d-flex align-items-center ">
+                    <ul class="col-12 d-flex text-white h-75 p-0 m-0 ">
+                        <li class="col-1  h-100 d-flex justify-content-center align-items-center"><a href="index.html" class="d-flex align-items-center justify-content-center"><img class="col-9" src="assets/img/logo.png" alt=""></a></li>
+                        <li class="col-2 col-sm-1 col-md-2 col-lg-1 h-100  d-flex  justify-content-around align-items-center p-0 m-0">
+                            <div class="col-1 d-flex justify-content-center"><i class="font4 bi-geo-alt p-0 m-0"></i></div>
+                            <div class="col-11 row justify-content-start">
+                                <span class="font1 d-flex p-0 m-0 col-12">Deliver to</span>
+                                <span class="font3 d-flex p-0 m-0 col-12" >Indonesia</span>
+                            </div>
+                        </li>
+                        <li class="col-5 col-sm-6 col-md-5 col-lg-6 h-100 d-flex justify-content-center  align-items-center">
+                           <div id="_inp" class="col-12 d-flex align-items-center p-0 m-0">
+                                <select name="" id="" class="font5 col-2 col-lg-1 m-0 p-0" >
+                                    <option value="All">All</option>
+                                    <option value="All Departments">All Departments</option>
+                                    <option value="Arts & Crafts">Arts & Crafts</option>
+                                    <option value="Automotive">Automotive</option>
+                                    <option value="Baby">Baby</option>
+                                    <option value="Books">Books</option>
+                                    <option value="Deals">Deals</option>
+                                  </select> 
+                                  <input class="col-9 col-lg-10  m-0 p-0" type="search">
+                                  <button class="col-1 m-0 p-0 d-flex justify-content-center align-items-center"><i class="font3 bi bi-search"></i></button>
+                            </div>
+                        </li>
+                        <li class="col-1 m-0 h-100 d-flex justify-content-center  align-items-center">
+                            <span class="col-5  d-flex justify-content-end m-1 p-0 h-50 align-items-center"><img class="col-9 col-md-5" src="assets/img/usFlag.png" alt=""></span>
+                            <span class="font2 d-flex justify-content-start align-items-center col-6 d-flex  h-50">EN</span>
+                        </li>
+                        <li class="col-1 h-100 d-flex justify-content-center align-items-center">
+                            <div class="col-11 row justify-content-start p-0 m-0  h-75">
+                                <span class="font1 d-flex justify-content-center col-10  p-0 m-0">Hello, sign in</span>
+                                <span class="font2 d-flex justify-content-end col-12 p-0 pe-1 m-0" >Account & Lists </span>
+                            </div>
+                            <div class="col-1 d-flex justify-content-center align-items-end  h-75"><i class="font3 bi bi-caret-down-fill"></i></div>
+                        </li>
+                        <li class="col-1 h-100 d-flex justify-content-center align-items-center">
+                            <div class="col-11 row justify-content-start p-0 m-0  h-75">
+                                <span class="font1 d-flex justify-content-center col-10  p-0 m-0">Returns</span>
+                                <span class="font2 d-flex justify-content-center col-12 p-0 pe-1 m-0" >& Orders</span>
+                            </div>
+                        </li>
+                        <li class="col-1 h-100 d-flex justify-content-center align-items-center">
+                            <div class="col-12 h-75 d-flex justify-content-center  align-items-end m-0 p-0">
+                                <div class="col-6 h-100 d-flex justify-content-center align-items-center m-0 p-0">
+                                    <span id="c0" class="col-2 col-md-5 p-0 m-0 d-flex ">0</span>
+                                    <img id="cimg" class="col-12 p-0 m-0" src="assets/img/cart.png" alt="cart">
+                                </div>
+                                <div id="_cart" class="col-2 col-sm-3 col-md-6  p-0 m-0">Cart</div>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+                <div id="head2" class="container-fluid p-0">
+                    <div  class="d-flex h-75 col-12 justify-content-between align-items-center m-0 p-0">
+                        <ul class="col-8 col-md-6 d-flex m-0 p-0 text-white">
+                            <li class="col-2  d-flex justify-content-center p-0 m-0 align-items-center" id="all"><a href="#" class="col-5 m-0 p-0 d-flex justify-content-center align-items-center"><i class="bi bi-list col-5"></i><span class="col-5 d-flex">All</span></a></li>
+                            <li class="col-2 d-flex justify-content-center p-0 m-0 align-items-center"><a href="#">Today's Deals</a></li>
+                            <li class="col-3 d-flex justify-content-center p-0 m-0 ms-1 ms-md-0 align-items-center"><a href="#">Customer Service</a></li>
+                            <li class="col-2 d-flex justify-content-center p-0 m-0 align-items-center"><a href="#">Registry</a></li>
+                            <li class="col-2 d-flex justify-content-center p-0 m-0 align-items-center"><a href="#">Gift Cards</a></li>
+                            <li class="col-1 d-flex justify-content-center p-0 m-0 align-items-center"><a href="#">Sell</a></li>
+                        </ul>
+                        <span class="col-3 col-md-2 d-flex justify-content-end align-items-center"><a class="col-12" href="#">Shop deals in Electronics</a><span>
+                    </div>
+                </div>
+            </header>
+        </section>
+
+        <section class="container-fluid search-info-bar">
+            <div class="container-xxl p-0 d-flex justify-content-between align-items-center flex-wrap">
+                <p class="mb-0">1-16 of over 100,000 results for "headphones"</p>
+                <div class="sort-by-top">
+                    Sort by: 
+                    <select class="form-select d-inline-block w-auto ms-2">
+                        <option>Featured</option>
+                        <option>Price: Low to High</option>
+                        <option>Price: High to Low</option>
+                        <option>Avg. Customer Review</option>
+                        <option>Newest Arrivals</option>
+                    </select>
+                </div>
+            </div>
+        </section>
+
+        <section id="search-main-content" class="container-fluid p-0 m-0">
+            <div class="container-xxl p-0 search-results-container">
+                <aside class="col-lg-2 search-filter-sidebar">
+    <div class="filter-group">
+    <h5>Popular Shopping Ideas</h5>
+    <ul class="filter-list">
+        <li><a href="#">Wireless</a></li>
+        <li><a href="#">Bluetooth</a></li>
+        <li><a href="#">Bone Conduction</a></li>
+        <li><a href="#">Animal</a></li>
+        <li><a href="#" class="see-more-link-small filter-expand-toggle" data-target="#popular-ideas-more"><span>See more</span> <i class="bi bi-chevron-down"></i></a></li>
+    </ul>
+    <ul class="filter-list filter-hidden" id="popular-ideas-more">
+        <li><a href="#">Headband</a></li>
+        <li><a href="#">Desktop</a></li>
+        <li><a href="#">Sleep</a></li>
+        <li><a href="#">Studio</a></li>
+        <li><a href="#">Travel</a></li>
+        <li><a href="#">Foldable</a></li>
+        <li><a href="#">Portable</a></li>
+        <li><a href="#">Tablet</a></li>
+        <li><a href="#">Bass</a></li>
+        <li><a href="#">Work</a></li>
+        <li><a href="#">Retro</a></li>
+        <li><a href="#">Fantasy</a></li>
+        <li><a href="#">Call Control</a></li>
+        <li><a href="#">Desk</a></li>
+        <li><a href="#">Sweatproof</a></li>
+        <li><a href="#">Spiderman</a></li>
+        <li><a href="#">Hello Kitty</a></li>
+        <li><a href="#">Volume Control</a></li>
+        <li><a href="#">Jack</a></li>
+        <li><a href="#">Pokemon</a></li>
+        <li><a href="#">Neckband</a></li>
+    </ul>
+</div>
+    
+    <div class="filter-group">
+        <hr>
+        <div class="form-check">
+            <input type="checkbox" id="free-shipping" class="form-check-input">
+            <label for="free-shipping" class="form-check-label">Free Shipping by Amazon</label>
+        </div>
+        <div class="form-check mt-1">
+            <input type="checkbox" id="eligible-free-shipping" class="form-check-input">
+            <label for="eligible-free-shipping" class="form-check-label">Eligible for Free Shipping</label>
+        </div>
+    </div>
+
+    <div class="filter-group price-filter-group">
+        <hr>
+        <h5>Price</h5>
+        <div class="price-range-display">
+            <span>$1 - $5,700+</span>
+        </div>
+        <div class="price-range-slider-container">
+            <div id="price-slider"></div> <div class="price-input-group d-flex align-items-center mt-2">
+                <input type="text" class="form-control form-control-sm me-1 price-input"  placeholder="Min">
+                <span>-</span>
+                <input type="text" class="form-control form-control-sm mx-1 price-input" placeholder="Max">
+                <button class="btn btn-sm btn-outline-secondary go-button">Go</button>
+            </div>
+        </div>
+    </div>
+
+    <div class="filter-group">
+        <hr>
+        <h5>Deals & Discounts</h5>
+        <ul class="filter-list">
+            <li><a href="#">All Discounts</a></li>
+            <li><a href="#">Today's Deals</a></li>
+        </ul>
+    </div>
+
+    <div class="filter-group">
+        <hr>
+        <h5>Customer Reviews</h5>
+        <div class="rating-filter">
+            <a href="#"><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star"></i> <span class="ms-1">& Up</span></a>
+            <a href="#"><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star"></i><i class="bi bi-star"></i> <span class="ms-1">& Up</span></a>
+            <a href="#"><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star"></i><i class="bi bi-star"></i><i class="bi bi-star"></i> <span class="ms-1">& Up</span></a>
+            <a href="#"><i class="bi bi-star-fill"></i><i class="bi bi-star"></i><i class="bi bi-star"></i><i class="bi bi-star"></i><i class="bi bi-star"></i> <span class="ms-1">& Up</span></a>
+        </div>
+    </div>
+
+    <div class="filter-group">
+    <hr>
+    <h5>Brands</h5>
+    <input type="text" class="form-control form-control-sm mb-2" placeholder="Search Brand">
+    <ul class="brand-list filter-list">
+        <li><div class="form-check"><input type="checkbox" id="brand-sony" class="form-check-input"> <label for="brand-sony" class="form-check-label">Sony</label></div></li>
+        <li><div class="form-check"><input type="checkbox" id="brand-jbl" class="form-check-input"> <label for="brand-jbl" class="form-check-label">JBL</label></div></li>
+        <li><div class="form-check"><input type="checkbox" id="brand-bose" class="form-check-input"> <label for="brand-bose" class="form-check-label">Bose</label></div></li>
+        <li><div class="form-check"><input type="checkbox" id="brand-tozo" class="form-check-input"> <label for="brand-tozo" class="form-check-label">TOZO</label></div></li>
+        <li><div class="form-check"><input type="checkbox" id="brand-jlab" class="form-check-input"> <label for="brand-jlab" class="form-check-label">JLab</label></div></li>
+        <li><div class="form-check"><input type="checkbox" id="brand-oneodio" class="form-check-input"> <label for="brand-oneodio" class="form-check-label">OneOdio</label></div></li>
+        <li><div class="form-check"><input type="checkbox" id="brand-skullcandy" class="form-check-input"> <label for="brand-skullcandy" class="form-check-label">Skullcandy</label></div></li>
+        <li><div class="form-check"><input type="checkbox" id="brand-edifier" class="form-check-input"> <label for="brand-edifier" class="form-check-label">Edifier</label></div></li>
+        <li><div class="form-check"><input type="checkbox" id="brand-logitech" class="form-check-input"> <label for="brand-logitech" class="form-check-label">Logitech</label></div></li>
+        <li><div class="form-check"><input type="checkbox" id="brand-sennheiser" class="form-check-input"> <label for="brand-sennheiser" class="form-check-label">Sennheiser</label></div></li>
+        <li><div class="form-check"><input type="checkbox" id="brand-philips" class="form-check-input"> <label for="brand-philips" class="form-check-label">Philips</label></div></li>
+        <li><a href="#" class="see-more-link-small filter-expand-toggle" data-target="#brand-more"><span>See more</span> <i class="bi bi-chevron-down"></i></a></li>
+    </ul>
+    <ul class="brand-list filter-list filter-hidden" id="brand-more">
+        <li><div class="form-check"><input type="checkbox" id="brand-iclever" class="form-check-input"> <label for="brand-iclever" class="form-check-label">iClever</label></div></li>
+        <li><div class="form-check"><input type="checkbox" id="brand-belkin" class="form-check-input"> <label for="brand-belkin" class="form-check-label">Belkin</label></div></li>
+        <li><div class="form-check"><input type="checkbox" id="brand-razer" class="form-check-input"> <label for="brand-razer" class="form-check-label">Razer</label></div></li>
+        <li><div class="form-check"><input type="checkbox" id="brand-audio-technica" class="form-check-input"> <label for="brand-audio-technica" class="form-check-label">Audio-Technica</label></div></li>
+        <li><div class="form-check"><input type="checkbox" id="brand-lubos" class="form-check-input"> <label for="brand-lubos" class="form-check-label">LUBOS</label></div></li>
+        <li><div class="form-check"><input type="checkbox" id="brand-beyerdynamic" class="form-check-input"> <label for="brand-beyerdynamic" class="form-check-label">beyerdynamic</label></div></li>
+        <li><div class="form-check"><input type="checkbox" id="brand-jvc" class="form-check-input"> <label for="brand-jvc" class="form-check-label">JVC</label></div></li>
+        <li><div class="form-check"><input type="checkbox" id="brand-avantree" class="form-check-input"> <label for="brand-avantree" class="form-check-label">Avantree</label></div></li>
+        <li><div class="form-check"><input type="checkbox" id="brand-samsung" class="form-check-input"> <label for="brand-samsung" class="form-check-label">Samsung</label></div></li>
+        <li><div class="form-check"><input type="checkbox" id="brand-soundpeats" class="form-check-input"> <label for="brand-soundpeats" class="form-check-label">SOUNDPEATS</label></div></li>
+        <li><div class="form-check"><input type="checkbox" id="brand-poly" class="form-check-input"> <label for="brand-poly" class="form-check-label">POLY</label></div></li>
+        <li><div class="form-check"><input type="checkbox" id="brand-mifo" class="form-check-input"> <label for="brand-mifo" class="form-check-label">Mifo</label></div></li>
+        <li><div class="form-check"><input type="checkbox" id="brand-yealink" class="form-check-input"> <label for="brand-yealink" class="form-check-label">Yealink</label></div></li>
+        <li><div class="form-check"><input type="checkbox" id="brand-eksa" class="form-check-input"> <label for="brand-eksa" class="form-check-label">EKSA</label></div></li>
+        <li><div class="form-check"><input type="checkbox" id="brand-ucomx" class="form-check-input"> <label for="brand-ucomx" class="form-check-label">UCOMX</label></div></li>
+        <li><div class="form-check"><input type="checkbox" id="brand-musicozy" class="form-check-input"> <label for="brand-musicozy" class="form-check-label">MUSICOZY</label></div></li>
+        <li><div class="form-check"><input type="checkbox" id="brand-acer" class="form-check-input"> <label for="brand-acer" class="form-check-label">Acer</label></div></li>
+        <li><div class="form-check"><input type="checkbox" id="brand-turtle-beach" class="form-check-input"> <label for="brand-turtle-beach" class="form-check-label">Turtle Beach</label></div></li>
+        <li><div class="form-check"><input type="checkbox" id="brand-nubwo" class="form-check-input"> <label for="brand-nubwo" class="form-check-label">NUBWO</label></div></li>
+        <li><div class="form-check"><input type="checkbox" id="brand-oceano" class="form-check-input"> <label for="brand-oceano" class="form-check-label">Oceano</label></div></li>
+        <li><div class="form-check"><input type="checkbox" id="brand-steelseries" class="form-check-input"> <label for="brand-steelseries" class="form-check-label">Steelseries</label></div></li>
+        <li><div class="form-check"><input type="checkbox" id="brand-sades" class="form-check-input"> <label for="brand-sades" class="form-check-label">SADES</label></div></li>
+        <li><div class="form-check"><input type="checkbox" id="brand-synchronized" class="form-check-input"> <label for="brand-synchronized" class="form-check-label">Synchronized</label></div></li>
+    </ul>
+</div>
+
+    <div class="filter-group">
+        <hr>
+        <h5>Top Brands</h5>
+        <div class="form-check">
+            <input type="checkbox" id="top-brands-checkbox" class="form-check-input">
+            <label for="top-brands-checkbox" class="form-check-label">Top Brands</label>
+        </div>
+    </div>
+
+    <div class="filter-group">
+        <hr>
+        <h5>Headphones Form Factor</h5>
+        <ul class="filter-list">
+            <li><div class="form-check"><input type="checkbox" id="form-in-ear" class="form-check-input"> <label for="form-in-ear" class="form-check-label">In Ear</label></div></li>
+            <li><div class="form-check"><input type="checkbox" id="form-headband" class="form-check-input"> <label for="form-headband" class="form-check-label">Headband</label></div></li>
+            <li><div class="form-check"><input type="checkbox" id="form-on-ear" class="form-check-input"> <label for="form-on-ear" class="form-check-label">On Ear</label></div></li>
+            <li><div class="form-check"><input type="checkbox" id="form-over-ear" class="form-check-input"> <label for="form-over-ear" class="form-check-label">Over Ear</label></div></li>
+            <li><div class="form-check"><input type="checkbox" id="form-true-wireless" class="form-check-input"> <label for="form-true-wireless" class="form-check-label">True Wireless</label></div></li>
+        </ul>
+    </div>
+
+    <div class="filter-group">
+        <hr>
+        <h5>More-sustainable Products</h5>
+        <ul class="filter-list">
+            <li><div class="form-check"><input type="checkbox" id="sustainable-pledge" class="form-check-input"> <label for="sustainable-pledge" class="form-check-label">Climate Pledge Friendly</label></div></li>
+        </ul>
+    </div>
+
+    <div class="filter-group">
+        <hr>
+        <h5>Audio Latency</h5>
+        <ul class="filter-list">
+            <li><div class="form-check"><input type="checkbox" id="latency-up19" class="form-check-input"> <label for="latency-up19" class="form-check-label">Up to 19 ms</label></div></li>
+            <li><div class="form-check"><input type="checkbox" id="latency-20-34" class="form-check-input"> <label for="latency-20-34" class="form-check-label">20 to 34 ms</label></div></li>
+            <li><div class="form-check"><input type="checkbox" id="latency-35-49" class="form-check-input"> <label for="latency-35-49" class="form-check-label">35 to 49 ms</label></div></li>
+            <li><div class="form-check"><input type="checkbox" id="latency-50above" class="form-check-input"> <label for="latency-50above" class="form-check-label">50 ms & above</label></div></li>
+        </ul>
+    </div>
+
+    <div class="filter-group">
+        <hr>
+        <h5>Unit Count</h5>
+        <ul class="filter-list">
+            <li><div class="form-check"><input type="checkbox" id="unit-1" class="form-check-input"> <label for="unit-1" class="form-check-label">1</label></div></li>
+            <li><div class="form-check"><input type="checkbox" id="unit-2" class="form-check-input"> <label for="unit-2" class="form-check-label">2</label></div></li>
+            <li><div class="form-check"><input type="checkbox" id="unit-3above" class="form-check-input"> <label for="unit-3above" class="form-check-label">3 & above</label></div></li>
+        </ul>
+    </div>
+
+    <div class="filter-group">
+        <hr>
+        <h5>Premium Brands</h5>
+        <ul class="filter-list">
+            <li><div class="form-check"><input type="checkbox" id="premium-brands-checkbox" class="form-check-input"> <label for="premium-brands-checkbox" class="form-check-label">Premium Brands</label></div></li>
+        </ul>
+    </div>
+
+    <div class="filter-group">
+        <hr>
+        <h5>Frequency Response</h5>
+        <ul class="filter-list">
+            <li><div class="form-check"><input type="checkbox" id="freq-up99" class="form-check-input"> <label for="freq-up99" class="form-check-label">Up to 99,999 Hz</label></div></li>
+        </ul>
+    </div>
+
+    <div class="filter-group">
+        <hr>
+        <h5>Battery Life</h5>
+        <ul class="filter-list">
+            <li><div class="form-check"><input type="checkbox" id="battery-up9" class="form-check-input"> <label for="battery-up9" class="form-check-label">Up to 9 h</label></div></li>
+            <li><div class="form-check"><input type="checkbox" id="battery-10-14" class="form-check-input"> <label for="battery-10-14" class="form-check-label">10 to 14 h</label></div></li>
+            <li><div class="form-check"><input type="checkbox" id="battery-15-19" class="form-check-input"> <label for="battery-15-19" class="form-check-label">15 to 19 h</label></div></li>
+            <li><div class="form-check"><input type="checkbox" id="battery-20-24" class="form-check-input"> <label for="battery-20-24" class="form-check-label">20 to 24 h</label></div></li>
+            <li><div class="form-check"><input type="checkbox" id="battery-25above" class="form-check-input"> <label for="battery-25above" class="form-check-label">25 h & above</label></div></li>
+        </ul>
+    </div>
+
+    <div class="filter-group">
+        <hr>
+        <h5>Specific Uses</h5>
+        <ul class="filter-list">
+            <li><div class="form-check"><input type="checkbox" id="use-gaming" class="form-check-input"> <label for="use-gaming" class="form-check-label">Gaming</label></div></li>
+            <li><div class="form-check"><input type="checkbox" id="use-travel" class="form-check-input"> <label for="use-travel" class="form-check-label">Travel</label></div></li>
+            <li><div class="form-check"><input type="checkbox" id="use-entertainment" class="form-check-input"> <label for="use-entertainment" class="form-check-label">Entertainment</label></div></li>
+            <li><div class="form-check"><input type="checkbox" id="use-business" class="form-check-input"> <label for="use-business" class="form-check-label">Business</label></div></li>
+            <li><div class="form-check"><input type="checkbox" id="use-fitness" class="form-check-input"> <label for="use-fitness" class="form-check-label">Fitness</label></div></li>
+            <li><div class="form-check"><input type="checkbox" id="use-professional" class="form-check-input"> <label for="use-professional" class="form-check-label">Professional</label></div></li>
+            <li><div class="form-check"><input type="checkbox" id="use-school" class="form-check-input"> <label for="use-school" class="form-check-label">School</label></div></li>
+            <li><div class="form-check"><input type="checkbox" id="use-sleeping" class="form-check-input"> <label for="use-sleeping" class="form-check-label">Sleeping</label></div></li>
+        </ul>
+    </div>
+
+    <div class="filter-group">
+        <hr>
+        <h5>Impedance</h5>
+        <ul class="filter-list">
+            <li><div class="form-check"><input type="checkbox" id="impedance-up1" class="form-check-input"> <label for="impedance-up1" class="form-check-label">Up to 1</label></div></li>
+            <li><div class="form-check"><input type="checkbox" id="impedance-1-9" class="form-check-input"> <label for="impedance-1-9" class="form-check-label">1 to 9</label></div></li>
+            <li><div class="form-check"><input type="checkbox" id="impedance-2-49" class="form-check-input"> <label for="impedance-2-49" class="form-check-label">2 to 49</label></div></li>
+            <li><div class="form-check"><input type="checkbox" id="impedance-50above" class="form-check-input"> <label for="impedance-50above" class="form-check-label">50 & above</label></div></li>
+        </ul>
+    </div>
+
+    <div class="filter-group">
+        <hr>
+        <h5>Battery Charge Time</h5>
+        <ul class="filter-list">
+            <li><div class="form-check"><input type="checkbox" id="charge-up1" class="form-check-input"> <label for="charge-up1" class="form-check-label">Up to 1 h</label></div></li>
+            <li><div class="form-check"><input type="checkbox" id="charge-1-19" class="form-check-input"> <label for="charge-1-19" class="form-check-label">1 to 1.9 h</label></div></li>
+            <li><div class="form-check"><input type="checkbox" id="charge-2-29" class="form-check-input"> <label for="charge-2-29" class="form-check-label">2 to 2.9 h</label></div></li>
+            <li><div class="form-check"><input type="checkbox" id="charge-3above" class="form-check-input"> <label for="charge-3above" class="form-check-label">3 h & above</label></div></li>
+        </ul>
+    </div>
+
+    <div class="filter-group">
+        <hr>
+        <h5>Audio Driver Size</h5>
+        <ul class="filter-list">
+            <li><div class="form-check"><input type="checkbox" id="driver-3above" class="form-check-input"> <label for="driver-3above" class="form-check-label">3 in & above</label></div></li>
+        </ul>
+    </div>
+
+    <div class="filter-group">
+        <hr>
+        <h5>Audio Driver Type</h5>
+        <ul class="filter-list">
+            <li><div class="form-check"><input type="checkbox" id="driver-dynamic" class="form-check-input"> <label for="driver-dynamic" class="form-check-label">Dynamic Driver</label></div></li>
+            <li><div class="form-check"><input type="checkbox" id="driver-balanced-armature" class="form-check-input"> <label for="driver-balanced-armature" class="form-check-label">Balanced Armature Driver</label></div></li>
+            <li><div class="form-check"><input type="checkbox" id="driver-hybrid" class="form-check-input"> <label for="driver-hybrid" class="form-check-label">Hybrid Driver</label></div></li>
+            <li><div class="form-check"><input type="checkbox" id="driver-bone-conduction" class="form-check-input"> <label for="driver-bone-conduction" class="form-check-label">Bone Conduction Driver</label></div></li>
+            <li><div class="form-check"><input type="checkbox" id="driver-electrostatic" class="form-check-input"> <label for="driver-electrostatic" class="form-check-label">Electrostatic Driver</label></div></li>
+            <li><div class="form-check"><input type="checkbox" id="driver-piezoelectric" class="form-check-input"> <label for="driver-piezoelectric" class="form-check-label">Piezoelectric Driver</label></div></li>
+            <li><div class="form-check"><input type="checkbox" id="driver-planar-magnetic" class="form-check-input"> <label for="driver-planar-magnetic" class="form-check-label">Planar Magnetic Driver</label></div></li>
+        </ul>
+    </div>
+
+    <div class="filter-group">
+        <hr>
+        <h5>Item Weight</h5>
+        <ul class="filter-list">
+            <li><div class="form-check"><input type="checkbox" id="weight-up1" class="form-check-input"> <label for="weight-up1" class="form-check-label">Up to 1 lb</label></div></li>
+            <li><div class="form-check"><input type="checkbox" id="weight-1-19" class="form-check-input"> <label for="weight-1-19" class="form-check-label">1 to 1.9 lb</label></div></li>
+            <li><div class="form-check"><input type="checkbox" id="weight-2-29" class="form-check-input"> <label for="weight-2-29" class="form-check-label">2 to 2.9 lb</label></div></li>
+            <li><div class="form-check"><input type="checkbox" id="weight-3above" class="form-check-input"> <label for="weight-3above" class="form-check-label">3 lb & above</label></div></li>
+        </ul>
+    </div>
+
+    <div class="filter-group">
+        <hr>
+        <h5>Carrying Case Color</h5>
+        <ul class="filter-list color-filter-list">
+            <li><a href="#" class="color-box" style="background-color: black;" title="Black"></a></li>
+            <li><a href="#" class="color-box" style="background-color: white; border: 1px solid #ccc;" title="White"></a></li>
+            <li><a href="#" class="color-box" style="background-color: blue;" title="Blue"></a></li>
+            <li><a href="#" class="color-box" style="background-color: beige;" title="Beige"></a></li>
+            <li><a href="#" class="color-box" style="background-color: brown;" title="Brown"></a></li>
+            <li><a href="#" class="color-box" style="background-color: transparent; border: 1px dashed #ccc;" title="Clear"></a></li>
+            <li><a href="#" class="color-box" style="background-color: gold;" title="Gold"></a></li>
+            <li><a href="#" class="see-more-link-small filter-expand-toggle" data-target="#color-more"><span>See more</span> <i class="bi bi-chevron-down"></i></a></li>
+        </ul>
+        <ul class="filter-list color-filter-list">
+            <li><a href="#" class="color-box" style="background-color: darkgreen;" title="Dark Green"></a></li>
+            <li><a href="#" class="color-box" style="background-color: purple;" title="Purple"></a></li>
+            <li><a href="#" class="color-box" style="background-color: gray;" title="Gray"></a></li>
+            <li><a href="#" class="color-box" style="background-color: orange;" title="Orange"></a></li>
+            <li><a href="#" class="color-box" style="background-color: pink;" title="Pink"></a></li>
+            <li><a href="#" class="color-box" style="background-color: tan;" title="Tan"></a></li>
+            <li><a href="#" class="color-box" style="background-color: yellow; border: 1px solid #ccc;" title="Yellow"></a></li>
+        </ul>
+    </div>
+
+    <div class="filter-group">
+        <hr>
+        <h5>Carrying Case Material</h5>
+        <ul class="filter-list">
+            <li><div class="form-check"><input type="checkbox" id="case-plastic" class="form-check-input"> <label for="case-plastic" class="form-check-label">Plastic</label></div></li>
+            <li><div class="form-check"><input type="checkbox" id="case-fabric" class="form-check-input"> <label for="case-fabric" class="form-check-label">Fabric</label></div></li>
+            <li><div class="form-check"><input type="checkbox" id="case-leather" class="form-check-input"> <label for="case-leather" class="form-check-label">Leather</label></div></li>
+            <li><div class="form-check"><input type="checkbox" id="case-aluminum" class="form-check-input"> <label for="case-aluminum" class="form-check-label">Aluminum</label></div></li>
+            <li><div class="form-check"><input type="checkbox" id="case-cardboard" class="form-check-input"> <label for="case-cardboard" class="form-check-label">Cardboard</label></div></li>
+            <li><div class="form-check"><input type="checkbox" id="case-faux-leather" class="form-check-input"> <label for="case-faux-leather" class="form-check-label">Faux Leather</label></div></li>
+            <li><div class="form-check"><input type="checkbox" id="case-hdpe" class="form-check-input"> <label for="case-hdpe" class="form-check-label">High-Density Polyethylene (HDPE)</label></div></li>
+            <li><a href="#" class="see-more-link-small filter-expand-toggle" data-target="#case-material-more"><span>See more</span> <i class="bi bi-chevron-down"></i></a></li>
+        </ul>
+        <ul class="filter-list filter-hidden" id="case-material-more">
+            <li><div class="form-check"><input type="checkbox" id="case-silicone" class="form-check-input"> <label for="case-silicone" class="form-check-label">Silicone</label></div></li>
+            </ul>
+    </div>
+
+    <div class="filter-group">
+        <hr>
+        <h5>Release Date</h5>
+        <ul class="filter-list">
+            <li><a href="#">Last 30 days</a></li>
+            <li><a href="#">Last 90 days</a></li>
+        </ul>
+    </div>
+
+    <div class="filter-group">
+        <hr>
+        <h5>Amazon Certified</h5>
+        <ul class="filter-list">
+            <li><div class="form-check"><input type="checkbox" id="certified-alexa" class="form-check-input"> <label for="certified-alexa" class="form-check-label">Works with Alexa</label></div></li>
+        </ul>
+    </div>
+
+    <div class="filter-group">
+        <hr>
+        <h5>Seller</h5>
+        <ul class="filter-list">
+            <li><a href="#">Amazon.com</a></li>
+            <li><a href="#">BoxWave Corporation</a></li>
+            <li><a href="#" class="see-more-link-small filter-expand-toggle" data-target="#seller-more"><span>See more</span> <i class="bi bi-chevron-down"></i></a></li>
+        </ul>
+        <ul class="filter-list filter-hidden" id="seller-more">
+            <li><a href="#">Another Seller 1</a></li>
+            <li><a href="#">Another Seller 2</a></li>
+        </ul>
+    </div>
+</aside>
+
+                <div class="col-lg-10 search-results-right">
+                    <div class="amazon-ad-banner">
+                        <img src="assets/img/div/ZTk5MTExZmUt._FMpng_AC_SY200_QL85_CB791193071_.png" alt="Alexa Early Prime Day Deals" class="img-fluid">
+                        <div class="ad-info">
+                            <img src="assets/img/div/MjI4MWViOGQt._FMpng_AC_SY50_QL85_CB791193071_.png" alt="Alexa" class="ad-logo">
+                            <h5>Early Prime Day Deals: Save up to 33% on Echo Show</h5>
+                            <a href="#" class="btn btn-primary btn-sm">Shop Echo Show</a>
+                        </div>
+                        <span class="ad-source">Featured from Amazon brands</span>
+                    </div>
+
+                    <h2 class="search-results-main-title">Results</h2>
+                    <p class="search-check-page">Check each product page for other buying options.</p>
+
+                    <div class="product-item-list">
+                        <div class="product-item">
+                            <div class="product-item-image">
+                                <img src="assets/img/div/prod/1.png">
+                            </div>
+                            <div class="product-item-details">
+                                <h3 class="product-item-title">BERIBES Bluetooth Headphones Over Ear, 65H Playtime and 6 EQ Music Modes Wireless Headphones with Microphone, HiFi Stereo Foldable Lightweight Headsets, Deep Bass for Home Office Cellphone...</h3>
+                                <div class="product-item-rating">
+                                    <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-half"></i>
+                                    <span class="rating-text">4.5</span>
+                                    <span class="reviews-count">41,297</span>
+                                </div>
+                                <p class="bought-in-month"><i class="bi bi-box"></i> 10K+ bought in past month</p>
+                                <p class="product-price-large">$29.99</p>
+                                <p class="delivery-info">FREE delivery <span class="delivery-date">Sat, July 6</span></p>
+                                <p class="prime-eligibility">Or fastest delivery tomorrow</p>
+                            </div>
+                        </div>
+
+                        <div class="product-item">
+                            <div class="product-item-image">
+                                <img src="assets/img/div/prod/2.png">
+                            </div>
+                            <div class="product-item-details">
+                                <h3 class="product-item-title">Beats Studio Pro - Wireless Bluetooth Noise Cancelling Headphones - Personalized Spatial Audio, USB-C Lossless...</h3>
+                                <div class="product-item-rating">
+                                    <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-half"></i>
+                                    <span class="rating-text">4.5</span>
+                                    <span class="reviews-count">21,956</span>
+                                </div>
+                                <p class="bought-in-month"><i class="bi bi-box"></i> 10K+ bought in past month</p>
+                                <p class="product-price-large">$188.58</p>
+                                <p class="delivery-info">FREE delivery <span class="delivery-date">Sat, July 6</span></p>
+                                <p class="prime-eligibility">Or fastest delivery tomorrow</p>
+                            </div>
+                        </div>
+
+                        <div class="product-item">
+                            <div class="product-item-image">
+                                <img src="assets/img/div/prod/3.png">
+                            </div>
+                            <div class="product-item-details">
+                                <h3 class="product-item-title">Sony WH-1000XM6 The Best Wireless Noise Canceling Headphones, HD NC Processor QN3, 12 Microphones,...</h3>
+                                <div class="product-item-rating">
+                                    <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-half"></i>
+                                    <span class="rating-text">4.5</span>
+                                    <span class="reviews-count">330</span>
+                                </div>
+                                <p class="bought-in-month"><i class="bi bi-box"></i> 2K+ bought in past month</p>
+                                <p class="product-price-large">$448.00</p>
+                                <p class="delivery-info">FREE delivery <span class="delivery-date">Sat, July 6</span></p>
+                                <p class="prime-eligibility">Or fastest delivery tomorrow</p>
+                            </div>
+                        </div>
+
+                        <div class="product-item">
+                            <div class="product-item-image">
+                                <img src="assets/img/div/prod/4.png">
+                            </div>
+                            <div class="product-item-details">
+                                <h3 class="product-item-title">Soundcore Anker Life Q20 Hybrid Active Noise Cancelling Headphones, Wireless Over Ear Bluetooth Headphones,...</h3>
+                                <div class="product-item-rating">
+                                    <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-half"></i>
+                                    <span class="rating-text">4.5</span>
+                                    <span class="reviews-count">2,415</span>
+                                </div>
+                                <p class="bought-in-month"><i class="bi bi-box"></i> 10K+ bought in past month</p>
+                                <p class="product-price-large">$39.99</p>
+                                <p class="delivery-info">FREE delivery <span class="delivery-date">Sat, July 6</span></p>
+                                <p class="prime-eligibility">Or fastest delivery tomorrow</p>
+                            </div>
+                        </div>
+
+                        <div class="product-item">
+                            <div class="product-item-image">
+                                <img src="assets/img/div/prod/5.png">
+                            </div>
+                            <div class="product-item-details">
+                                <h3 class="product-item-title">Wireless Earbuds, Bluetooth Ear Buds with Big Bass Stereo Sound, 48 Hours Playtime, Lightweight in-Ear Fit...</h3>
+                                <div class="product-item-rating">
+                                    <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
+                                    <span class="rating-text">5</span>
+                                    <span class="reviews-count">693</span>
+                                </div>
+                                <p class="bought-in-month"><i class="bi bi-box"></i> 10K+ bought in past month</p>
+                                <p class="product-price-large">$159.99</p>
+                                <p class="delivery-info">FREE delivery <span class="delivery-date">Sat, July 6</span></p>
+                                <p class="prime-eligibility">Or fastest delivery tomorrow</p>
+                            </div>
+                        </div>
+
+                        <div class="product-item">
+                            <div class="product-item-image">
+                                <img src="assets/img/div/prod/6.png">
+                            </div>
+                            <div class="product-item-details">
+                                <h3 class="product-item-title">Sony WH-CH520 Wireless Headphones Bluetooth On-Ear Headset with Microphone, Black New</h3>
+                                <div class="product-item-rating">
+                                    <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-half"></i>
+                                    <span class="rating-text">4.5</span>
+                                    <span class="reviews-count">22,056</span>
+                                </div>
+                                <p class="bought-in-month"><i class="bi bi-box"></i> 10K+ bought in past month</p>
+                                <p class="product-price-large">$55.08</p>
+                                <p class="delivery-info">FREE delivery <span class="delivery-date">Sat, July 6</span></p>
+                                <p class="prime-eligibility">Or fastest delivery tomorrow</p>
+                            </div>
+                        </div>
+
+                        <div class="product-item">
+                            <div class="product-item-image">
+                                <img src="assets/img/div/prod/7.png">
+                            </div>
+                            <div class="product-item-details">
+                                <h3 class="product-item-title">Nova1Pro Kids Wireless Active Noise Cancelling Headphones, Bluetooth 5.4, 40H Playtime, Volume...</h3>
+                                <div class="product-item-rating">
+                                    <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-half"></i>
+                                    <span class="rating-text">4.5</span>
+                                    <span class="reviews-count">26</span>
+                                </div>
+                                <p class="bought-in-month"><i class="bi bi-box"></i> 10K+ bought in past month</p>
+                                <p class="product-price-large">$29.99</p>
+                                <p class="delivery-info">FREE delivery <span class="delivery-date">Sat, July 6</span></p>
+                                <p class="prime-eligibility">Or fastest delivery tomorrow</p>
+                            </div>
+                        </div>
+
+                        <div class="product-item">
+                            <div class="product-item-image">
+                                <img src="assets/img/div/prod/8.png">
+                            </div>
+                            <div class="product-item-details">
+                                <h3 class="product-item-title">TAGRY Active Noise Cancelling Headphones 100H Playtime Wireless Over Ear Bluetooth Headphones Fast...</h3>
+                                <div class="product-item-rating">
+                                    <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-half"></i>
+                                    <span class="rating-text">4.5</span>
+                                    <span class="reviews-count">177</span>
+                                </div>
+                                <p class="bought-in-month"><i class="bi bi-box"></i> 10K+ bought in past month</p>
+                                <p class="product-price-large">$29.98</p>
+                                <p class="delivery-info">FREE delivery <span class="delivery-date">Sat, July 6</span></p>
+                                <p class="prime-eligibility">Or fastest delivery tomorrow</p>
+                            </div>
+                        </div>
+
+                        <div class="product-item">
+                            <div class="product-item-image">
+                                <img src="assets/img/div/prod/9.png">
+                            </div>
+                            <div class="product-item-details">
+                                <h3 class="product-item-title">Wireless Earbuds Bluetooth Headphones 80hrs Playback Ear Buds Power Display with Noise Canceling Mic Headsets...</h3>
+                                <div class="product-item-rating">
+                                    <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
+                                    <span class="rating-text">5</span>
+                                    <span class="reviews-count">1,350</span>
+                                </div>
+                                <p class="bought-in-month"><i class="bi bi-box"></i> 8K+ bought in past month</p>
+                                <p class="product-price-large">$19.99</p>
+                                <p class="delivery-info">FREE delivery <span class="delivery-date">Sat, July 6</span></p>
+                                <p class="prime-eligibility">Or fastest delivery tomorrow</p>
+                            </div>
+                        </div>
+
+                        <div class="product-item">
+                            <div class="product-item-image">
+                                <img src="assets/img/div/prod/10.png">
+                            </div>
+                            <div class="product-item-details">
+                                <h3 class="product-item-title">Sony WH-1000XM4 Wireless Premium Noise Canceling Overhead Headphones with Mic for Phone-Call and Alexa...</h3>
+                                <div class="product-item-rating">
+                                    <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-half"></i>
+                                    <span class="rating-text">4.5</span>
+                                    <span class="reviews-count">60,136</span>
+                                </div>
+                                <p class="bought-in-month"><i class="bi bi-box"></i> 10K+ bought in past month</p>
+                                <p class="product-price-large">$298.00</p>
+                                <p class="delivery-info">FREE delivery <span class="delivery-date">Sat, July 6</span></p>
+                                <p class="prime-eligibility">Or fastest delivery tomorrow</p>
+                            </div>
+                        </div>
+
+                        
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="afterMain" class="container-fluid d-flex justify-content-center pt-0 pt-sm-2 pb-0 pb-sm-2 pt-md-4 pb-md-4  m-0 pe-0 ps-0 ">
+            <div class="row container-fluid justify-content-center m-0  p-0 p-sm-2 ">
+                <span class="col-12 d-flex justify-content-center m-2">See personalized recommendations</span>
+                <button class="col-2">Sign in</button>
+                <span class="col-12 d-flex justify-content-center m-2">New customer? <a href="#">Start here.</a></span>
+            </div>
+        </section>
+
+        <section id="btop" class="container-fluid d-flex justify-content-center align-items-center p-0 m-0" onclick="topFunction()">
+            <button id="myBtn" href="#_top">Back to top</button>
+        </section>
+
+        <section id="foot" class="container-fluid p-0 m-0">
+            <footer class="container-fluid  p-0 m-0">
+                <div class="container-fluid  pb-5">
+                    <div class="container d-flex justify-content-center pt-5 pe-5">
+                        <div class="col-2  m-3 ">
+                            <ul class="col-12 m-0 p-0">
+                                <li>Get to Know Us</li>
+                                <li><a href="#">Careers</a></li>
+                                <li><a href="#">Blog</a></li>
+                                <li><a href="#">About Amazon</a></li>
+                                <li><a href="#">Investor Relations</a></li>
+                                <li><a href="#">Amazon Devices</a></li>
+                                <li><a href="#">Amazon Science</a></li>
+                            </ul>
+                        </div>
+                        <div class="col-2 m-3 ">
+                            <ul class="col-12 m-0 p-0">
+                                <li>Make Money with Us</li>
+                                <li><a href="#">Sell products on Amazon</a></li>
+                                <li><a href="#">Sell on Amazon Business</a></li>
+                                <li><a href="#">Sell apps on Amazon</a></li>
+                                <li><a href="#">Become an Affiliate</a></li>
+                                <li><a href="#">Advertise Your Products</a></li>
+                                <li><a href="#">Self-Publish with Us</a></li>
+                                <li><a href="#">Host an Amazon Hub</a></li>
+                                <li><a href="#">›See More Make Money with Us</a></li>
+                            </ul>
+                        </div>
+                        <div class="col-2 m-3 ">
+                            <ul class="col-12 m-0 p-0">
+                                <li>Amazon Payment Products</li>
+                                <li><a href="#">Amazon Business Card</a></li>
+                                <li><a href="#">Shop with Points</a></li>
+                                <li><a href="#">Reload Your Balance</a></li>
+                                <li><a href="#">Amazon Currency Converter</a></li>
+                            </ul>
+                        </div>
+                        <div class="col-2 m-3 ">
+                            <ul class="col-12 m-0 p-0 ">
+                                <li>Let Us Help You</li>
+                                <li><a href="#">Amazon and COVID-19</a></li>
+                                <li><a href="#">Your Account</a></li>
+                                <li><a href="#">Your Orders</a></li>
+                                <li><a href="#">Shipping Rates & Policies</a></li>
+                                <li><a href="#">Returns & Replacements</a></li>
+                                <li><a href="#">Manage Your Content and Devices</a></li>
+                                <li><a href="#">Amazon Assistant</a></li>
+                                <li><a href="#">Help</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div id="foot2" class="container-fluid  p-0 m-0">
+                    <div class="container  d-flex flex-wrap justify-content-center ">
+                        <div class="col-10 col-md-9 p-0 mt-1 mt-sm-2 mt-md-3 mt-lg-4 d-flex justify-content-between">
+                            <a class="col-1 m-1"  href="#">Amazon MusicStream millions of songs</a>
+                            <a class="col-1 m-1" href="#">Amazon Advertising Find, attract, and engage customers    </a>
+                            <a class="col-1 m-1" href="#">6pm Score deals on fashion brands</a>
+                            <a class="col-1 m-1" href="#">AbeBooks Books, art & collectibles</a>
+                            <a class="col-1 m-1" href="#">ACX Audiobook Publishing Made Easy</a>
+                            <a class="col-1 m-1" href="#">Sell on Amazon Start a Selling Account</a>
+                            <a class="col-1 m-1" href="#">Amazon Business Everything For Your Business</a>
+                        </div>
+                        <div class="col-10 col-md-9 p-0 mt-1 mt-sm-2 mt-md-3 mt-lg-4 d-flex justify-content-between">
+                            <a class="col-1 m-1" href="#">AmazonGlobal Ship Orders Internationally</a>
+                            <a class="col-1 m-1" href="#">Home Services Experienced Pros Happiness Guarantee</a>
+                            <a class="col-1 m-1" href="#">Amazon Ignite Sell your original Digital Educational Resources</a>
+                            <a class="col-1 m-1" href="#">Amazon Web Services Scalable Cloud Computing Services</a>
+                            <a class="col-1 m-1" href="#">Audible Listen to Books & Original Audio Performances</a>
+                            <a class="col-1 m-1" href="#">Book Depository Books With Free Delivery Worldwide</a>
+                            <a class="col-1 m-1" href="#">Box Office Mojo Find Movie Box Office Data</a>
+                        </div>
+                        <div class="col-10 col-md-9 p-0 mt-1 mt-sm-2 mt-md-3 mt-lg-4 d-flex justify-content-between">
+                            <a class="col-1 m-1" href="#">ComiXology Thousands of Digital Comics</a>
+                            <a class="col-1 m-1" href="#">DPReview Digital Photography</a>
+                            <a class="col-1 m-1" href="#">Fabric Sewing, Quilting & Knitting</a>
+                            <a class="col-1 m-1" href="#">Goodreads Book reviews & recommendations</a>
+                            <a class="col-1 m-1" href="#">IMDb Movies, TV & Celebrities</a>
+                            <a class="col-1 m-1" href="#">IMDbPro Get Info Entertainment Professionals Need</a>
+                            <a class="col-1 m-1" href="#">Kindle Direct Publishing Indie Digital & Print Publishing Made Easy</a>
+                        </div>
+                        <div class="col-10 col-md-9 p-0 mt-1 mt-sm-2 mt-md-3 mt-lg-4 d-flex justify-content-between">
+                            <a class="col-1 m-1" href="#">Prime Video Direct Video Distribution Made Easy</a>
+                            <a class="col-1 m-1" href="#">Shopbop Designer Fashion Brands</a>
+                            <a class="col-1 m-1" href="#">Woot! Deals and Shenanigans</a>
+                            <a class="col-1 m-1" href="#">Zappos Shoes & Clothing</a>
+                            <a class="col-1 m-1" href="#">Ring Smart Home Security Systems</a>
+                            <a class="col-1 m-1" href="#">eero WiFi Stream 4K Video in Every Room</a>
+                            <a class="col-1 m-1" href="#">Blink Smart Security for Every Home</a>
+                        </div>
+                        <div class="col-10 col-md-9 p-0 mt-1 mt-sm-2 mt-md-3 mt-lg-4 d-flex justify-content-between">
+                            <a class="col-1 m-1" href="#"></a>
+                            <a class="col-1 m-1" href="#"></a>
+                            <a class="col-1 m-1" href="#">Neighbors App Real-Time Crime & Safety Alerts</a>
+                            <a class="col-1 m-1" href="#">Amazon Subscription Boxes Top subscription boxes right to your door</a>
+                            <a class="col-1 m-1" href="#">PillPack Pharmacy Simplified</a>
+                            <a class="col-1 m-1" href="#"></a>
+                            <a class="col-1 m-1" href="#"></a>
+                        </div>
+                        <div  class="btm1 col-7 col-sm-5  p-0 m-0 d-flex justify-content-between">
+                            <a class="col-4 d-flex justify-content-center p-0 m0" href="#">Conditions of Use</a>
+                            <a class="col-4 d-flex justify-content-center p-0 m0" href="#">Privacy Notice</a>
+                            <a class="col-4 d-flex justify-content-center p-0 m0" href="#">Your Ads Privacy Choices</a>
+                        </div>
+                        <div class="btm1 col-10 p-0 m-0  d-flex justify-content-center">
+                            <span class="col-11 d-flex justify-content-center">© 2025 amazon_research04</span>
+                        </div>
+                    </div>
+                </div>
+            </footer>
+        </section>
+
+        <div id="lmenu" class="lm  ">
+            <div id="topLmenu" class="col-12  d-flex">
+                <span class="col-3  d-flex  justify-content-end align-items-center"><i class="col-5  col-xl-3 bi bi-person-circle"></i></span>
+                <span class="d-flex col-9  justify-content-start align-items-center">Hello, sign in</span>
+            </div>
+            <div class="d1 col-12  p-0 d-flex flex-wrap justify-content-center">
+                <ul class="col-12 p-0 d-flex flex-wrap justify-content-center align-content-center">
+                    <li class="col-11 col-md-12 pt-2 pb-2 ps-1 ps-md-5 m-0 d-flex  align-items-center ">Digital Content & Devices</li>
+                    <li  class="col-11 col-md-12 pt-2 pb-2 ps-1 ps-md-5 m-0 d-flex justify-content-between align-items-center"><span class="col-11">Amazon Music</span> <i class="col-1 p-0 m-0 bi bi-chevron-right"></i></li>
+                    <li class="col-11 col-md-12 pt-2 pb-2 ps-1 ps-md-5 m-0  d-flex justify-content-between align-items-center"><span class="col-11">Kindle E-readers $ Books</span> <i class="col-1 p-0 m-0 bi bi-chevron-right"></i></li>
+                    <li class="col-11 col-md-12 pt-2 pb-2 ps-1 ps-md-5 m-0  d-flex justify-content-between align-items-center"><span class="col-11">Amazon Appstore</span> <i class="col-1 p-0 m-0  bi bi-chevron-right"></i></li>
+                </ul>
+            </div>
+            <div class="d1 col-12  p-0 d-flex flex-wrap justify-content-center">
+                <ul class="col-12 p-0 d-flex flex-wrap justify-content-center align-content-center">
+                    <li class="col-11 col-md-12 pt-2 pb-2 ps-1 ps-md-5 m-0 d-flex  align-items-center">Shop By Department</li>
+                    <li  class="col-11 col-md-12 pt-2 pb-2 ps-1 ps-md-5 m-0 d-flex justify-content-between align-items-center"><span class="col-11">Electronics</span> <i class="col-1 p-0 m-0 bi bi-chevron-right"></i></li>
+                    <li class="col-11 col-md-12 pt-2 pb-2 ps-1 ps-md-5 m-0  d-flex justify-content-between align-items-center"><span class="col-11">Computers</span> <i class="col-1 p-0 m-0 bi bi-chevron-right"></i></li>
+                    <li class="col-11 col-md-12 pt-2 pb-2 ps-1 ps-md-5 m-0  d-flex justify-content-between align-items-center"><span class="col-11">Smart Home</span> <i class="col-1 p-0 m-0  bi bi-chevron-right"></i></li>
+                    <li class="col-11 col-md-12 pt-2 pb-2 ps-1 ps-md-5 m-0  d-flex justify-content-between align-items-center"><span class="col-11">Arts & Crafts</span> <i class="col-1 p-0 m-0  bi bi-chevron-right"></i></li>
+                    <div id="dnMenu" class="d1 d2 col-12  -top -dark -bottom-0 p-0 d-flex flex-wrap justify-content-center">
+                        <ul class="col-12 p-0 border-top border-2 d-flex flex-wrap justify-content-center align-content-center">
+                            <li class="d-none"></li>
+                            <li class="col-11 col-md-12 pt-2 pb-2 ps-1 ps-md-5 m-0  d-flex justify-content-between align-items-center"><span class="col-11">Automotive</span> <i class="col-1 p-0 m-0 bi bi-chevron-right"></i></li>
+                            <li class="col-11 col-md-12 pt-2 pb-2 ps-1 ps-md-5 m-0  d-flex justify-content-between align-items-center"><span class="col-11">Baby</span> <i class="col-1 p-0 m-0 bi bi-chevron-right"></i></li>
+                            <li class="col-11 col-md-12 pt-2 pb-2 ps-1 ps-md-5 m-0  d-flex justify-content-between align-items-center"><span class="col-11">Beauty And Personal Care</span> <i class="col-1 p-0 m-0  bi bi-chevron-right"></i></li>
+                            <li class="col-11 col-md-12 pt-2 pb-2 ps-1 ps-md-5 m-0  d-flex justify-content-between align-items-center"><span class="col-11">Women's Fashion</span> <i class="col-1 p-0 m-0  bi bi-chevron-right"></i></li>
+                            <li class="col-11 col-md-12 pt-2 pb-2 ps-1 ps-md-5 m-0  d-flex justify-content-between align-items-center"><span class="col-11">Men's Fashion</span> <i class="col-1 p-0 m-0  bi bi-chevron-right"></i></li>
+                            <li class="col-11 col-md-12 pt-2 pb-2 ps-1 ps-md-5 m-0  d-flex justify-content-between align-items-center"><span class="col-11">Girls' Fashion</span> <i class="col-1 p-0 m-0  bi bi-chevron-right"></i></li>
+                            <li class="col-11 col-md-12 pt-2 pb-2 ps-1 ps-md-5 m-0  d-flex justify-content-between align-items-center"><span class="col-11">Boys' Fashion</span> <i class="col-1 p-0 m-0  bi bi-chevron-right"></i></li>
+                            <li class="col-11 col-md-12 pt-2 pb-2 ps-1 ps-md-5 m-0  d-flex justify-content-between align-items-center"><span class="col-11">Health And Household</span> <i class="col-1 p-0 m-0  bi bi-chevron-right"></i></li>
+                            <li class="col-11 col-md-12 pt-2 pb-2 ps-1 ps-md-5 m-0  d-flex justify-content-between align-items-center"><span class="col-11">Home And Kitchen</span> <i class="col-1 p-0 m-0  bi bi-chevron-right"></i></li>
+                            <li class="col-11 col-md-12 pt-2 pb-2 ps-1 ps-md-5 m-0  d-flex justify-content-between align-items-center"><span class="col-11">Industrial And Scientific</span> <i class="col-1 p-0 m-0  bi bi-chevron-right"></i></li>
+                        </ul>
+                    </div>
+                    <li id="activDnMenu" class="col-11 col-md-12 pt-2 pb-2 ps-1 ps-md-5 m-0  d-flex justify-content-start align-items-center"><span class="col-3">See All</span> <i id="_icon1" class="col-1 p-0 m-0  bi-chevron-down"></i></li>
+                </ul>
+            </div>
+            <div class="d1 col-12  p-0 d-flex flex-wrap justify-content-center">
+                <ul class="col-12 p-0 d-flex flex-wrap justify-content-center align-content-center">
+                    <li class="col-11 col-md-12 pt-2 pb-2 ps-1 ps-md-5 m-0 d-flex  align-items-center">Programs & Features</li>
+                    <li  class="col-11 col-md-12 pt-2 pb-2 ps-1 ps-md-5 m-0 d-flex justify-content-between align-items-center"><span class="col-11">Gift Card</span> <i class="col-1 p-0 m-0 bi bi-chevron-right"></i></li>
+                    <li class="col-11 col-md-12 pt-2 pb-2 ps-1 ps-md-5 m-0  d-flex justify-content-between align-items-center"><span class="col-11">Shop By Interest</span> <i class="col-1 p-0 m-0 bi bi-chevron-right"></i></li>
+                    <li class="col-11 col-md-12 pt-2 pb-2 ps-1 ps-md-5 m-0  d-flex justify-content-between align-items-center"><span class="col-11">Amazon Live</span> <i class="col-1 p-0 m-0  bi bi-chevron-right"></i></li>
+                    <li class="col-11 col-md-12 pt-2 pb-2 ps-1 ps-md-5 m-0  d-flex justify-content-between align-items-center"><span class="col-11">International Shopping</span> <i class="col-1 p-0 m-0  bi bi-chevron-right"></i></li>
+                    <div id="dnMenu2" class="d1 d2 col-12  -top -dark -bottom-0 p-0 d-flex flex-wrap justify-content-center">
+                        <ul class="col-12 p-0 d-flex flex-wrap justify-content-center align-content-center">
+                            <li class="d-none"></li>
+                            <li class="col-11 col-md-12 pt-2 pb-2 ps-1 ps-md-5 m-0  d-flex justify-content-between align-items-center"><span class="col-11">Amazon Second Chance</span> <i class="col-1 p-0 m-0 bi bi-chevron-right"></i></li>
+                        </ul>
+                    </div>
+                    <li id="activDnMenu2" class="col-11 col-md-12 pt-2 pb-2 ps-1 ps-md-5 m-0  d-flex justify-content-start align-items-center"><span class="col-3">See All</span> <i id="_icon2" class="col-1 p-0 m-0  bi-chevron-down"></i></li>
+                </ul>
+            </div>
+            <div class="d1 col-12  p-0 d-flex flex-wrap justify-content-center">
+                <ul class="col-12 p-0 d-flex flex-wrap justify-content-center align-content-center">
+                    <li class="col-11 col-md-12 pt-2 pb-2 ps-1 ps-md-5 m-0 d-flex  align-items-center">Help & Settings</li>
+                    <li  class="col-11 col-md-12 pt-2 pb-2 ps-1 ps-md-5 m-0 d-flex justify-content-between align-items-center"><span class="col-11">Your Account</span> <i class="col-1 p-0 m-0 bi bi-chevron-right"></i></li>
+                    <li class="col-11 col-md-12 pt-2 pb-2 ps-1 ps-md-5 m-0  d-flex justify-content-between align-items-center"><i class=" col-1 p-0 m-0 bi bi-globe"></i><span class="col-11">English</span></li>
+                    <li class="col-11 col-md-12 pt-2 pb-2 ps-1 ps-md-5 m-0  d-flex justify-content-between align-items-center"><img src="assets/img/usFlag.png" class="col-1 p-0 m-0 me-1  bi bi-chevron-right"></img><span class="col-11">United States</span> </li>
+                    <li class="col-11 col-md-12 pt-2 pb-2 ps-1 ps-md-5 m-0  d-flex justify-content-between align-items-center"><span class="col-11">CUstomer Service</span></li>
+                    <li class="col-11 col-md-12 pt-2 pb-2 ps-1 ps-md-5 m-0  d-flex justify-content-between align-items-center"><span class="col-11">Sign in</span></li>
+                </ul>
+            </div>
+        </div>
+        <span id="x">X</span>
+        <div id="fullsc"></div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/noUiSlider/15.7.0/nouislider.min.js"></script>
+    <script src="assets/js/script2.js"></script> </main>
+    </main>
+</body>
+</html>
