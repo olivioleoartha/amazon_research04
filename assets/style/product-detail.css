@@ -1,0 +1,2413 @@
+/* Styling umum untuk halaman detail produk bagian atas */
+body {
+    background-color: #eaeded; /* Latar belakang halaman yang ringan */
+    font-family: 'Inter', sans-serif;
+    color: #0f1111; /* Warna teks default */
+}
+
+a {
+    color: #007185;
+    text-decoration: none;
+}
+
+a:hover {
+    color: #c45500;
+    text-decoration: underline;
+}
+
+/* Breadcrumb */
+.breadcrumb-section {
+    background-color: #f0f2f2; /* Warna latar belakang ringan */
+    padding: 10px 0;
+    /* Margin top ini disesuaikan dengan tinggi navbar tetap Anda */
+    border-bottom: 1px solid #e0e0e0;
+}
+
+.breadcrumb {
+    margin-bottom: 0;
+    font-size: 0.85rem;
+    padding-left: 15px; /* Sesuaikan padding untuk kontainer-xxl */
+}
+
+.breadcrumb-item a {
+    color: #007185;
+}
+
+.breadcrumb-item a:hover {
+    color: #c45500;
+}
+
+.breadcrumb-item.active {
+    color: #565959;
+}
+
+/* Main Product Detail Layout (3 kolom) */
+#product-detail-section-top { /* ID baru untuk bagian ini saja */
+    background-color: #fff; /* Latar belakang putih untuk area detail utama */
+    padding: 20px 0;
+}
+
+.product-detail-container-top { /* Kelas baru untuk kontainer bagian ini saja */
+    display: flex;
+    flex-wrap: wrap; /* Untuk responsivitas: kolom akan pindah ke baris baru */
+    padding: 0 15px !important; /* Pastikan padding sesuai dengan kontainer Bootstrap */
+    align-items: flex-start; /* Elemen dimulai dari atas kolom */
+    justify-content: space-between; /* Penting: Dorong kolom ke kiri, tengah, dan kanan */
+}
+
+/* Product Image Gallery (Kolom Kiri - Thumbnail) */
+.product-thumbnail-gallery {
+    /* Menggunakan flex basis untuk lebar agar lebih fleksibel dengan justify-content: space-between */
+    flex: 0 0 auto; /* Tidak akan menyusut atau melebar secara fleksibel */
+    width: 60px; /* Lebar tetap untuk galeri thumbnail */
+    padding-right: 15px; /* Jarak ke kolom tengah */
+    position: relative; /* Untuk video count */
+}
+
+@media (max-width: 991.98px) { /* Untuk tablet dan mobile */
+    .product-thumbnail-gallery {
+        width: 100%; /* Mengambil lebar penuh */
+        order: 2; /* Pindah ke bawah di mobile (setelah main info) */
+        padding-right: 0;
+        margin-top: 20px;
+        display: flex; /* Agar thumbnail horizontal */
+        overflow-x: auto; /* Mengizinkan scroll horizontal */
+        -webkit-overflow-scrolling: touch;
+        scrollbar-width: none; /* Sembunyikan scrollbar untuk Firefox */
+        -ms-overflow-style: none;  /* Sembunyikan scrollbar untuk IE/Edge */
+    }
+    .product-thumbnail-gallery::-webkit-scrollbar { /* Sembunyikan scrollbar untuk Chrome, Safari, Opera */
+        display: none;
+    }
+    .product-thumbnail-gallery .thumbnail-list {
+        display: flex; /* Membuat thumbnail horizontal */
+        flex-wrap: nowrap;
+        list-style: none;
+        padding: 0;
+        margin: 0;
+    }
+    .product-thumbnail-gallery .thumbnail-list li {
+        flex-shrink: 0; /* Mencegah thumbnail menyusut */
+        width: 60px; /* Lebar tetap untuk scroll horizontal */
+        height: 60px;
+        margin-right: 10px;
+    }
+}
+
+
+.thumbnail-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.thumbnail-list li {
+    margin-bottom: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    cursor: pointer;
+    overflow: hidden;
+    width: 60px; /* Lebar thumbnail */
+    height: 60px; /* Tinggi thumbnail */
+    display: flex; /* Untuk pusatkan gambar di dalamnya */
+    justify-content: center;
+    align-items: center;
+}
+
+.thumbnail-list li:hover {
+    border-color: #f0c14b; /* Warna kuning Amazon saat hover */
+    box-shadow: 0 0 0 2px #f0c14b;
+}
+
+.thumbnail-list li.active-thumbnail {
+    border-color: #007185; /* Warna biru Amazon saat aktif */
+    box-shadow: 0 0 0 2px #007185;
+}
+
+.thumbnail-list img {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain; /* Pastikan gambar pas di dalam kotak */
+}
+
+.product-thumbnail-gallery .video-count {
+    font-size: 0.8rem;
+    color: #565959;
+    text-align: center;
+    margin-top: 5px;
+}
+
+
+/* Product Main Info (Kolom Tengah - Gambar Besar + Judul sampai About This Item) */
+.product-main-info {
+    flex: 1; /* Biarkan kolom ini mengambil sisa ruang yang tersedia */
+    width: 450px; /* Berikan lebar minimum agar tidak terlalu sempit */
+    padding: 0 20px; /* Padding di kiri dan kanan */
+}
+
+@media (max-width: 991.98px) {
+    .product-main-info {
+        flex: 0 0 100%;
+        max-width: 100%;
+        order: 1; /* Pindah ke atas di mobile */
+        padding: 0 15px;
+    }
+}
+
+.main-product-image-container {
+    text-align: center;
+    margin-bottom: 20px;
+    position: relative;
+    /* max-height: 500px; */ /* Dihapus, biarkan gambar menentukan tinggi */
+    height: auto; /* Biarkan tinggi menyesuaikan konten */
+    width: fit-content; /* Biarkan lebar menyesuaikan konten */
+    justify-content: start;
+    align-items: start;
+}
+.main-product-image-container img {
+    width: 500px !important;
+    /* Gunakan lebar yang lebih besar, sesuaikan ini agar sesuai dengan gambar di screenshot */
+    /* Contoh: bisa 80% dari lebar container atau nilai pixel tertentu */
+
+    object-fit: contain;
+}
+
+.click-to-zoom {
+    font-size: 0.75rem;
+    color: #007185;
+    background-color: rgba(255,255,255,0.7);
+    padding: 2px 5px;
+    border-radius: 3px;
+    cursor: pointer;
+}
+
+
+.product-title {
+    font-size: 1.6rem;
+    font-weight: normal;
+    line-height: 1.3;
+    margin-bottom: 10px;
+    color: #0f1111;
+}
+
+.product-meta-row {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+    flex-wrap: wrap; /* Agar bisa wrap di layar kecil */
+}
+
+.product-rating-meta {
+    font-size: 0.9rem;
+    color: #007185;
+    display: flex;
+    align-items: center;
+}
+.product-rating-meta i {
+    color: #f5c453; /* Warna bintang Amazon */
+    margin-right: 2px;
+}
+.product-rating-meta .rating-value {
+    font-weight: bold;
+    margin-left: 5px;
+}
+.product-rating-meta .reviews-count {
+    margin-left: 5px;
+}
+
+.product-meta-row .separator {
+    margin: 0 10px;
+    color: #ccc;
+}
+
+.brand-link {
+    font-size: 0.9rem;
+    color: #007185;
+}
+
+.bought-in-month {
+    font-size: 0.85rem;
+    color: #565959;
+    margin-top: 5px;
+}
+.bought-in-month i {
+    margin-right: 5px;
+    color: #888;
+}
+
+/* Price Section */
+.product-price-section .product-price-large {
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: #0f1111;
+    margin-bottom: 5px;
+}
+.product-price-section .shipping-details,
+.product-price-section .delivery-eta,
+.product-price-section .delivery-to-location {
+    font-size: 0.85rem;
+    color: #565959;
+    margin-bottom: 5px;
+}
+.product-price-section .delivery-details-link {
+    color: #007185;
+    font-size: 0.8rem;
+}
+.product-price-section .delivery-details-link i {
+    font-size: 0.7rem;
+}
+
+/* Style Variants */
+.product-style-options .option-group {
+    font-size: 0.9rem;
+    margin-bottom: 10px;
+}
+.product-style-options .option-label {
+    font-weight: bold;
+}
+.product-style-options .option-value {
+    color: #007185;
+}
+
+.style-variants {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-bottom: 15px;
+}
+.variant-item {
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    padding: 5px;
+    text-align: center;
+    cursor: pointer;
+    background-color: #fff;
+    transition: all 0.2s ease-in-out;
+}
+.variant-item:hover {
+    border-color: #f0c14b;
+    box-shadow: 0 0 0 2px #f0c14b;
+}
+.variant-item.active {
+    border-color: #007185;
+    box-shadow: 0 0 0 2px #007185;
+}
+.variant-item .variant-name {
+    font-size: 0.8rem;
+    display: block;
+    margin-bottom: 5px;
+}
+.variant-item .variant-image-wrapper {
+    width: 60px;
+    height: 60px;
+    margin: 0 auto 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.variant-item .variant-image {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+}
+.variant-item .variant-price {
+    font-size: 0.85rem;
+    font-weight: bold;
+    color: #0f1111;
+}
+.more-options-link {
+    font-size: 0.8rem;
+    color: #007185;
+}
+
+/* Tech Details */
+.product-tech-details {
+    margin-top: 15px;
+}
+.tech-detail-row {
+    display: flex;
+    justify-content: space-between;
+    font-size: 0.85rem;
+    margin-bottom: 5px;
+}
+.tech-detail-row .tech-label {
+    font-weight: bold;
+    color: #565959;
+}
+.tech-detail-row .tech-value {
+    color: #0f1111;
+}
+
+/* About This Item */
+.about-this-item h5 {
+    font-size: 1.1rem;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+.about-this-item #product-description-content ul { /* Target the UL inside the content div */
+    padding-left: 20px;
+    font-size: 0.9rem;
+    color: #0f1111;
+}
+.about-this-item #product-description-content ul li {
+    margin-bottom: 5px;
+    line-height: 1.4;
+}
+
+/* For Show more/less functionality in About This Item */
+#product-description-content {
+    overflow: hidden;
+    /* max-height akan diatur oleh JS berdasarkan konten */
+    transition: max-height 0.3s ease-out;
+}
+#product-description-content.collapsed-content {
+    max-height: 150px; /* Tinggi awal saat collapsed */
+}
+.show-more-less-link {
+    font-size: 0.9rem;
+    color: #007185;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    margin-top: 10px;
+}
+.show-more-less-link i {
+    margin-left: 5px;
+    font-size: 0.75rem;
+    transition: transform 0.2s ease-in-out;
+}
+.show-more-less-link.expanded i {
+    transform: rotate(180deg);
+}
+
+
+/* Buy Box Section (Kolom Kanan) */
+.product-buy-box {
+    /* Gunakan flex: 0 0 auto dan set width untuk Buy Box */
+    flex: 0 0 auto;
+    width: 280px; /* Lebar Buy Box seperti di Amazon */
+    padding-left: 20px; /* Jarak ke kolom tengah */
+    margin-left: auto; /* Dorong ke kanan */
+}
+
+@media (max-width: 991.98px) {
+    .product-buy-box {
+        flex: 0 0 100%;
+        width: 100%; /* Lebar penuh di mobile */
+        order: 3; /* Pindah ke paling bawah di mobile */
+        padding-left: 15px; /* Sesuaikan padding */
+        margin-top: 20px;
+        margin-left: 0; /* Hapus margin auto di mobile */
+    }
+}
+
+.buy-box-card {
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+}
+
+.buy-box-card .price-in-box {
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: #0f1111;
+    margin-bottom: 10px;
+}
+.buy-box-card .price-in-box sup {
+    font-size: 0.7em;
+    vertical-align: super;
+}
+
+.buy-box-card .delivery-info-box,
+.buy-box-card .deliver-to-box,
+.buy-box-card .in-stock-message {
+    font-size: 0.85rem;
+    color: #565959;
+    margin-bottom: 5px;
+}
+
+.buy-box-card .delivery-date-box {
+    font-weight: bold;
+    color: #0f1111;
+}
+
+.buy-box-card .countdown-timer {
+    color: #b12704;
+    font-weight: bold;
+}
+
+.buy-box-card .in-stock-message {
+    color: #007600; /* Hijau untuk in stock */
+    font-weight: bold;
+}
+
+.buy-box-card .quantity-selector label {
+    font-size: 0.85rem;
+    color: #0f1111;
+    font-weight: bold;
+}
+.buy-box-card .quantity-selector select {
+    width: auto; /* Biarkan lebar menyesuaikan konten */
+    font-size: 0.85rem;
+    padding: 0.375rem 1.75rem 0.375rem 0.75rem;
+    height: auto;
+    border-color: #adb1b8;
+    background-color: #f0f2f2;
+}
+
+.buy-box-card .add-to-cart-btn {
+    background-color: #ffd814; /* Kuning Amazon */
+    border-color: #ffc200;
+    color: #111;
+    font-weight: bold;
+    font-size: 0.9rem;
+}
+.buy-box-card .add-to-cart-btn:hover {
+    background-color: #f7ca00;
+    border-color: #e2b700;
+}
+.buy-box-card .add-to-cart-btn i {
+    margin-right: 5px;
+}
+
+.buy-box-card .buy-now-btn {
+    background-color: #ffa41c; /* Orange Amazon */
+    border-color: #ff8f00;
+    color: #111;
+    font-weight: bold;
+    font-size: 0.9rem;
+}
+.buy-box-card .buy-now-btn:hover {
+    background-color: #f79600;
+    border-color: #e28a00;
+}
+
+.buy-box-card .shipping-info-small,
+.buy-box-card .sold-by-info {
+    font-size: 0.8rem;
+    color: #565959;
+    margin-top: 10px;
+    margin-bottom: 5px;
+}
+.buy-box-card .shipping-info-small a,
+.buy-box-card .sold-by-info a {
+    color: #007185;
+}
+
+.buy-box-card .returns-policy,
+.buy-box-card .secure-transaction-info {
+    font-size: 0.8rem;
+    margin-bottom: 5px;
+}
+.buy-box-card .returns-policy a,
+.buy-box-card .secure-transaction-info a {
+    color: #007185;
+}
+.buy-box-card .secure-transaction-info i {
+    margin-right: 5px;
+    color: #007600;
+}
+
+.buy-box-card .gift-options {
+    font-size: 0.85rem;
+    margin-top: 15px;
+}
+.buy-box-card .gift-options input {
+    margin-right: 5px;
+}
+.buy-box-card .gift-options label {
+    color: #0f1111;
+}
+
+.buy-box-card .add-to-list-btn {
+    border-color: #adb1b8;
+    background-color: #f0f2f2;
+    color: #0f1111;
+    font-size: 0.9rem;
+    font-weight: normal;
+}
+.buy-box-card .add-to-list-btn:hover {
+    background-color: #e4e6e6;
+    border-color: #bcbcbc;
+}
+
+.other-sellers-box {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 15px;
+    font-size: 0.9rem;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+}
+.other-sellers-box a {
+    color: #007185;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    text-decoration: none;
+}
+.other-sellers-box a:hover {
+    text-decoration: underline;
+}
+.other-sellers-box p {
+    margin-bottom: 0;
+    color: #565959;
+}
+.other-sellers-box .other-seller-price {
+    font-weight: bold;
+    color: #0f1111;
+    font-size: 1rem;
+}
+.other-sellers-box .other-seller-price sup {
+    font-size: 0.7em;
+    vertical-align: super;
+}
+
+.seller-certifications h5 {
+    font-size: 0.95rem;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+.seller-certifications p {
+    font-size: 0.85rem;
+    color: #565959;
+}
+.seller-certifications a {
+    color: #007185;
+}
+
+/* Menyembunyikan elemen-elemen dari homepage agar tidak muncul di halaman ini */
+
+
+
+/* Media Queries untuk Responsivitas */
+@media (max-width: 767.98px) { /* Small devices (phones) */
+    .product-detail-container-top {
+        padding: 0 10px !important;
+    }
+    .product-main-info {
+        padding: 0 10px;
+        /* Tambahkan lebar penuh di mobile */
+        flex: 0 0 100%; 
+        max-width: 100%;
+        order: 1; /* Pindah ke atas */
+    }
+    .product-buy-box {
+        padding-left: 10px;
+        /* Tambahkan lebar penuh di mobile */
+        flex: 0 0 100%;
+        width: 100%;
+        order: 3; /* Pindah ke paling bawah */
+        margin-left: 0; /* Pastikan tidak ada margin auto dari desktop */
+    }
+    .product-thumbnail-gallery {
+        flex: 0 0 100%;
+        width: 100%;
+        order: 2; /* Pindah ke bawah gambar utama */
+        padding-right: 0;
+        margin-top: 20px;
+        display: flex;
+        overflow-x: auto;
+    }
+
+    .product-title {
+        font-size: 1.4rem;
+    }
+    .product-price-large {
+        font-size: 1.5rem;
+    }
+    .buy-box-card .price-in-box {
+        font-size: 1.5rem;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 991.98px) { /* Medium devices (tablets) */
+    .product-detail-container-top {
+        flex-direction: column; /* Jadikan kolom vertikal di tablet */
+    }
+    .product-thumbnail-gallery {
+        flex: 0 0 100%;
+        max-width: 100%;
+        order: 2;
+        padding-right: 0;
+        margin-top: 20px;
+        display: flex; /* Untuk horizontal scroll */
+        overflow-x: auto;
+    }
+    .product-main-info {
+        flex: 0 0 100%;
+        max-width: 100%;
+        order: 1;
+        padding: 0 15px;
+    }
+    .product-buy-box {
+        flex: 0 0 100%;
+        max-width: 100%;
+        order: 3;
+        padding-left: 15px;
+        margin-left: 0;
+    }
+}
+
+@media (min-width: 992px) { /* Large devices (desktops) - Untuk 3 kolom */
+    .product-detail-container-top {
+        flex-direction: row; /* Kembali ke layout baris */
+        justify-content: space-between; /* Untuk mendorong kolom ke ujung */
+    }
+    .product-thumbnail-gallery {
+        flex: 0 0 auto;
+        width: 60px; /* Lebar tetap thumbnail */
+        padding-right: 15px;
+        order: unset; /* Reset order */
+        margin-top: 0;
+        display: block; /* Kembali ke vertical display */
+        overflow-x: visible; /* Reset overflow */
+    }
+    .product-main-info {
+        /* Gunakan calc() untuk mengisi ruang tengah yang tersisa */
+        flex: 1; /* Ambil sisa ruang */
+        min-width: 450px; /* Minimum width untuk info produk */
+        max-width: calc(100% - 60px - 20px - 280px - 20px); /* Total lebar container - lebar thumbnail - padding thumbnail - lebar buybox - padding buybox */
+        padding: 0 20px;
+        order: unset;
+    }
+    .product-buy-box {
+        flex: 0 0 auto;
+        width: 280px; /* Lebar tetap buy box */
+        padding-left: 20px;
+        margin-left: auto; /* Dorong ke kanan */
+        order: unset;
+        margin-top: 0;
+    }
+}
+
+/* --- Lanjutan Styling untuk Halaman Detail Produk --- */
+
+/* Report Issue Link */
+.report-issue-section {
+    font-size: 0.85rem;
+    color: #007185;
+}
+.report-issue-section .report-issue-link {
+    color: #007185;
+    text-decoration: none;
+}
+.report-issue-section .report-issue-link:hover {
+    text-decoration: underline;
+    color: #c45500;
+}
+
+.empty-area{
+    height: 300px;
+}
+
+/* Product Carousel Section (Digunakan untuk "Deals on related products" dan "Related products with free delivery") */
+.product-carousel-section {
+    background-color: #eaeded; /* Latar belakang abu-abu */
+    padding-bottom: 8px; /* Padding bawah agar ada ruang ke elemen selanjutnya */
+    padding-top: 8px;
+    padding-left: 5px !important; /* Padding yang lebih kecil di sisi */
+    padding-right: 5px !important;
+    margin-top: 20px; /* Jarak dari bagian sebelumnya */
+    width: 100% !important;
+    height: 100% !important;
+}
+
+.product-carousel-section .section-cont {
+    padding-top: 20px !important;
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+    background-color: white;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+    border-radius: 4px;
+}
+
+.product-carousel-section .product-carousel-title {
+    font-size: 1.4rem; /* Sedikit lebih kecil dari h2 */
+    font-weight: 700;
+    margin-bottom: 15px;
+    padding-left: 10px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: #0F1111; 
+}
+.product-carousel-section .sponsored-tag {
+    font-size: 0.8rem;
+    color: #888;
+    font-weight: normal;
+}
+.product-carousel-section .page-indicator {
+    font-size: 0.8rem;
+    color: #888;
+    margin-left: auto; /* Dorong ke kanan */
+    padding-right: 10px; /* Padding untuk teks */
+}
+
+.product-carousel-container {
+    position: relative;
+    display: flex;
+    align-items: center;
+    /* Padding ini harus cukup besar untuk menampung lebar panah */
+    /* Lebar panah 45px, jadi setidaknya 45px atau sedikit lebih */
+    padding: 0 50px; /* Contoh: 50px di kiri dan kanan */
+}
+
+.product-carousel-wrapper {
+    display: flex;
+    flex-wrap: nowrap;
+    overflow-x: hidden;
+    -webkit-overflow-scrolling: touch; 
+    scrollbar-width: none; 
+    -ms-overflow-style: none;  
+    padding: 10px 0; /* Tetap pertahankan padding atas/bawah */
+    background-color: white; 
+    /* Hapus atau set ke 0 padding-left dan padding-right berikut */
+    /* padding-left: 0; */ 
+    /* padding-right: 0; */
+    flex-grow: 1; /* Penting: Biarkan wrapper mengisi ruang yang tersedia */
+}
+
+.product-carousel-wrapper::-webkit-scrollbar {
+    display: none; 
+}
+
+.carousel-item-card {
+    flex: 0 0 auto; 
+    width: 180px; /* Lebar default untuk setiap item carousel */
+    margin: 0 8px; 
+    padding: 10px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start; /* Align content to left */
+    justify-content: flex-start; 
+    cursor: pointer;
+    min-height: 250px; /* Minimal tinggi agar item konsisten */
+    border: 1px solid #f0f0f0;
+    border-radius: 4px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+    transition: all 0.2s ease-in-out;
+}
+.carousel-item-card:hover {
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    transform: translateY(-2px);
+}
+
+
+.carousel-item-card img {
+    width: auto;
+    max-height: 130px; /* Sesuaikan tinggi gambar */
+    object-fit: contain;
+    margin: 0 auto 10px; /* Pusatkan gambar horizontal */
+    display: block;
+}
+
+.carousel-item-card .carousel-item-title {
+    font-size: 0.9rem;
+    color: #007185;
+    line-height: 1.3;
+    margin-bottom: 5px;
+    text-align: left; /* Align text to left */
+    min-height: 40px; /* Pastikan tinggi konsisten untuk judul */
+}
+.carousel-item-card .carousel-item-title:hover {
+    text-decoration: underline;
+}
+
+.carousel-item-card .product-rating.small {
+    font-size: 0.8rem;
+    margin-bottom: 5px;
+}
+.carousel-item-card .product-rating.small i {
+    font-size: 0.85rem;
+}
+
+.carousel-item-card .limited-time-deal {
+    font-size: 0.8rem;
+    font-weight: bold;
+    color: #b12704;
+    margin-bottom: 3px;
+}
+.carousel-item-card .amazon-choice-badge {
+    font-size: 0.75rem;
+    background-color: #f0c14b;
+    padding: 2px 5px;
+    border-radius: 3px;
+    font-weight: bold;
+    color: #111;
+    margin-bottom: 5px;
+    display: inline-block;
+}
+.carousel-item-card .price-discount-carousel {
+    font-size: 1.1rem;
+    font-weight: bold;
+    color: #0f1111;
+    margin-bottom: 3px;
+    display: flex;
+    align-items: baseline;
+    gap: 5px;
+}
+.carousel-item-card .price-discount-carousel span {
+    font-size: 1.3em; /* Nilai harga lebih besar */
+}
+.carousel-item-card .price-discount-carousel sup {
+    font-size: 0.7em;
+    vertical-align: super;
+}
+.carousel-item-card .list-price {
+    font-size: 0.8rem;
+    color: #565959;
+    text-decoration: line-through;
+    margin-bottom: 5px;
+}
+.carousel-item-card .prime-badge {
+    font-size: 0.8rem;
+    color: #007185;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+.carousel-item-card .prime-badge i {
+    font-size: 1rem;
+    margin-right: 3px;
+}
+.carousel-item-card .save-coupon {
+    font-size: 0.8rem;
+    color: #b12704;
+    margin-top: 5px;
+    font-weight: 500;
+}
+.carousel-item-card .climate-pledge-friendly {
+    font-size: 0.75rem;
+    color: #007600;
+    margin-top: 5px;
+}
+.carousel-item-card .climate-pledge-friendly i {
+    margin-right: 3px;
+}
+
+
+.carousel-arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(255, 255, 255, 0.85); 
+    border: 1px solid #ddd;
+    width: 45px;
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    z-index: 10;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+    font-size: 1.4rem;
+    color: #0F1111;
+    transition: background-color 0.2s, border-color 0.2s;
+    border-radius: 4px;
+}
+
+.carousel-arrow.left-arrow {
+    left: 0px; 
+}
+
+.carousel-arrow.right-arrow {
+    right: 0px; 
+}
+
+.carousel-arrow:hover {
+    background-color: rgba(255, 255, 255, 1);
+    border-color: #999;
+}
+
+
+/* Brands in this category on Amazon */
+.product-brand-category-section .section-cont {
+    padding: 20px; /* Padding penuh untuk card */
+}
+.brand-category-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center; /* Pusatkan item grid */
+}
+.brand-category-item {
+    padding: 10px;
+    text-align: center;
+}
+.brand-category-item a {
+    text-decoration: none;
+    color: #007185;
+    display: block; /* Agar link mengambil seluruh area item */
+}
+.brand-category-item a:hover {
+    text-decoration: underline;
+}
+.brand-category-item img {
+    max-width: 100px; /* Ukuran gambar brand */
+    height: auto;
+    margin: 0 auto;
+    display: block;
+    border-radius: 4px; /* Sedikit roundness */
+}
+.brand-category-item h5 {
+    font-size: 0.9rem;
+    font-weight: normal;
+    margin-top: 10px;
+}
+
+
+/* Customer Reviews Summary Section */
+.customer-reviews-summary-section .section-cont {
+    padding: 20px;
+}
+.customer-reviews-summary-section .product-rating-meta {
+    font-size: 1.2rem; /* Ukuran rating lebih besar di summary */
+    color: #007185;
+    display: flex;
+    align-items: center;
+    margin-bottom: 5px;
+}
+.customer-reviews-summary-section .product-rating-meta i {
+    font-size: 1.3rem; /* Ukuran bintang lebih besar */
+}
+.customer-reviews-summary-section .rating-value {
+    font-size: 1.1rem;
+    font-weight: bold;
+    margin-left: 10px;
+}
+.customer-reviews-summary-section .total-ratings {
+    font-size: 0.85rem;
+    color: #565959;
+    margin-left: 10px;
+}
+
+.rating-bars {
+    margin-top: 15px;
+}
+.rating-bar-row {
+    display: flex;
+    align-items: center;
+    margin-bottom: 5px;
+}
+.rating-bar-row .rating-label {
+    font-size: 0.85rem;
+    color: #007185;
+    width: 60px; /* Lebar label bintang */
+    text-align: right;
+    margin-right: 10px;
+    flex-shrink: 0;
+}
+.rating-bar-row .rating-label:hover {
+    text-decoration: underline;
+}
+.rating-bar-row .progress {
+    flex-grow: 1; /* Progress bar mengisi sisa ruang */
+    height: 10px;
+    border-radius: 5px;
+    background-color: #e0e0e0;
+}
+.rating-bar-row .progress-bar {
+    background-color: #f0c14b !important; /* Warna kuning Amazon */
+}
+.rating-bar-row .rating-percentage {
+    font-size: 0.85rem;
+    color: #007185;
+    margin-left: 10px;
+    width: 40px; /* Lebar persentase */
+    text-align: left;
+    flex-shrink: 0;
+}
+.rating-bar-row .rating-percentage:hover {
+    text-decoration: underline;
+}
+
+
+/* Reviews with images carousel */
+.review-image-card {
+    min-height: 150px; /* Biarkan lebih pendek karena hanya gambar */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.review-image-card img {
+    max-width: 100%;
+    max-height: 120px; /* Batasi tinggi gambar review */
+    object-fit: contain;
+}
+
+/* Product Information Table */
+.product-information-section .section-cont {
+    padding: 20px;
+}
+.product-info-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 0.9rem;
+}
+.product-info-table th, .product-info-table td {
+    padding: 8px 0;
+    vertical-align: top;
+    border-bottom: 1px solid #eee;
+}
+.product-info-table th {
+    font-weight: bold;
+    color: #565959;
+    width: 200px; /* Lebar kolom label */
+    padding-right: 15px;
+}
+.product-info-table td {
+    color: #0f1111;
+}
+.product-info-table tr:last-child th,
+.product-info-table tr:last-child td {
+    border-bottom: none; /* Hapus border bawah di baris terakhir */
+}
+.product-info-table .product-rating-meta {
+    font-size: 0.85rem;
+}
+.product-info-table .product-rating-meta i {
+    font-size: 0.9rem;
+}
+
+
+/* GLOBAL CSS Overrides (jika product-detail.css diimpor setelah local.css,
+   maka ini akan menimpa gaya dari local.css) */
+/* Pastikan ini ada di bagian atas product-detail.css jika perlu menimpa global/local.css */
+.breadcrumb-section {
+    margin-top: 65px; /* Sesuaikan dengan tinggi navbar fix Anda */
+}
+
+
+/* Media Queries untuk Responsivitas */
+@media (max-width: 767.98px) { /* Small devices (phones) */
+    .report-issue-section {
+        text-align: center;
+    }
+    .product-carousel-section .carousel-arrow {
+        width: 30px;
+        height: 80px;
+        font-size: 1rem;
+    }
+    .carousel-item-card {
+        width: 140px; /* Lebih kecil di mobile */
+        min-height: 200px;
+    }
+    .carousel-item-card img {
+        max-height: 100px;
+    }
+    .product-brand-category-section .brand-category-item {
+        flex: 0 0 50%; /* 2 item per baris di mobile */
+        max-width: 50%;
+    }
+    .customer-reviews-summary-section .col-md-3,
+    .customer-reviews-summary-section .col-md-9 {
+        flex: 0 0 100%;
+        max-width: 100%;
+        text-align: center;
+    }
+    .customer-reviews-summary-section .product-rating-meta {
+        justify-content: center; /* Pusatkan rating di mobile */
+    }
+    .customer-reviews-summary-section .total-ratings {
+        margin-left: 0;
+    }
+    .rating-bar-row .rating-label,
+    .rating-bar-row .rating-percentage {
+        width: auto; /* Biarkan lebar otomatis */
+    }
+    .rating-bar-row .rating-label {
+        text-align: left;
+    }
+    .product-information-section .product-info-table th {
+        width: 120px; /* Lebar kolom label yang lebih kecil */
+        font-size: 0.8rem;
+    }
+    .product-information-section .product-info-table td {
+        font-size: 0.8rem;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 991.98px) { /* Medium devices (tablets) */
+    .product-carousel-section .carousel-arrow {
+        width: 35px;
+        height: 90px;
+        font-size: 1.2rem;
+    }
+    .carousel-item-card {
+        width: 160px;
+        min-height: 220px;
+    }
+    .carousel-item-card img {
+        max-height: 110px;
+    }
+    .customer-reviews-summary-section .col-md-3 {
+        flex: 0 0 30%;
+        max-width: 30%;
+    }
+    .customer-reviews-summary-section .col-md-9 {
+        flex: 0 0 70%;
+        max-width: 70%;
+    }
+}
+
+@media (min-width: 992px) { /* Large devices (desktops) */
+    .carousel-item-card {
+        width: 180px; /* Default width */
+        min-height: 250px;
+    }
+    .carousel-item-card img {
+        max-height: 130px;
+    }
+}
+
+
+/* Top Brand Section */
+.top-brand-section {
+    background-color: #fff;
+    padding-bottom: 8px;
+    padding-top: 8px;
+    padding-left: 5px !important;
+    padding-right: 5px !important;
+    margin-top: 20px;
+    width: 100% !important;
+    height: 100% !important;
+}
+
+.top-brand-section .section-cont {
+    padding-top: 20px !important;
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+    background-color: white;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+    border-radius: 4px;
+}
+
+.top-brand-title {
+    font-size: 1.4rem;
+    font-weight: 700;
+    margin-bottom: 15px;
+    padding-left: 10px;
+    color: #0F1111;
+}
+
+.top-brand-features {
+    display: flex;
+    justify-content: space-around;
+    padding: 10px 20px 20px;
+    gap: 20px;
+    flex-wrap: wrap; /* Allow wrapping on smaller screens */
+}
+
+.top-brand-feature-item {
+    flex: 1;
+    min-width: 200px; /* Minimum width for each item */
+    text-align: center;
+    padding: 10px;
+    border-right: 1px solid #e0e0e0; /* Separator */
+}
+
+.top-brand-feature-item:last-child {
+    border-right: none; /* No border for the last item */
+}
+
+@media (max-width: 767.98px) {
+    .top-brand-feature-item {
+        border-right: none;
+        border-bottom: 1px solid #e0e0e0;
+        margin-bottom: 15px;
+    }
+    .top-brand-feature-item:last-child {
+        border-bottom: none;
+    }
+}
+
+
+.top-brand-feature-item .feature-title {
+    font-weight: bold;
+    font-size: 1rem;
+    margin-bottom: 5px;
+    color: #0F1111;
+}
+
+.top-brand-feature-item .feature-description {
+    font-size: 0.85rem;
+    color: #565959;
+    margin-bottom: 0;
+}
+
+
+/* From The Brand Section */
+.from-the-brand-section {
+    background-color: #eaeded;
+    padding-bottom: 8px;
+    padding-top: 8px;
+    padding-left: 5px !important;
+    padding-right: 5px !important;
+    margin-top: 20px;
+    width: 100% !important;
+    height: 100% !important;
+}
+
+.from-the-brand-section .section-cont {
+    padding-top: 20px !important;
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+    background-color: white;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+    border-radius: 4px;
+}
+
+.from-the-brand-title {
+    font-size: 1.4rem;
+    font-weight: 700;
+    margin-bottom: 15px;
+    padding-left: 10px;
+    color: #0F1111;
+}
+
+.brand-content-wrapper {
+    display: flex;
+    padding: 10px 20px 20px;
+    gap: 20px;
+    flex-wrap: wrap; /* Allow wrapping */
+}
+
+.main-brand-image {
+    flex: 0 0 35%; /* Adjust width for the main image */
+    max-width: 35%;
+    display: flex;
+    align-items: flex-start; /* Align image to the top */
+    justify-content: center;
+}
+
+.main-brand-image img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+.brand-info-and-products {
+    flex: 1; /* Take remaining space */
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.brand-description-box {
+    background-color: #f8f8f8; /* Light background for the description box */
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.brand-logo {
+    max-width: 100px; /* Adjust size of the Sony logo */
+    height: auto;
+    margin-bottom: 10px;
+}
+
+.brand-tagline {
+    font-size: 0.9rem;
+    color: #0f1111;
+    margin-bottom: 10px;
+    line-height: 1.5;
+}
+
+.brand-history {
+    font-size: 0.85rem;
+    color: #565959;
+    line-height: 1.4;
+}
+
+.brand-product-showcase {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: space-around; /* Distribute items */
+}
+
+.product-showcase-item {
+    flex: 0 0 calc(50% - 5px); /* Two items per row, with gap */
+    max-width: calc(50% - 5px);
+    text-align: center;
+    border: 1px solid #f0f0f0;
+    border-radius: 4px;
+    padding: 10px;
+    background-color: #fff;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+    transition: all 0.2s ease-in-out;
+}
+
+.product-showcase-item:hover {
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    transform: translateY(-2px);
+}
+
+.product-showcase-item img {
+    max-width: 100%;
+    height: 100px; /* Fixed height for consistency */
+    object-fit: contain;
+    margin-bottom: 5px;
+}
+
+.product-showcase-item .showcase-title {
+    font-size: 0.9rem;
+    font-weight: bold;
+    color: #0f1111;
+    margin-bottom: 5px;
+}
+
+.product-showcase-item .shop-link {
+    font-size: 0.8rem;
+    color: #007185;
+}
+
+@media (max-width: 991.98px) { /* Tablets and smaller */
+    .main-brand-image {
+        flex: 0 0 100%; /* Full width for main image */
+        max-width: 100%;
+        margin-bottom: 20px;
+    }
+    .brand-info-and-products {
+        flex: 0 0 100%; /* Full width for info and products */
+        max-width: 100%;
+    }
+    .product-showcase-item {
+        flex: 0 0 calc(50% - 5px); /* Still two per row on smaller screens for compactness */
+        max-width: calc(50% - 5px);
+    }
+}
+
+@media (max-width: 575.98px) { /* Extra small devices (phones) */
+    .product-showcase-item {
+        flex: 0 0 100%; /* One item per row on very small screens */
+        max-width: 100%;
+    }
+}
+
+.ImageBanner img{
+    width: 100%;
+}
+
+/* Videos Section */
+.videos-section {
+    background-color: #eaeded;
+    padding-bottom: 8px;
+    padding-top: 8px;
+    padding-left: 5px !important;
+    padding-right: 5px !important;
+    margin-top: 20px;
+    width: 100% !important;
+    height: 100% !important;
+}
+
+.videos-section .section-cont {
+    padding-top: 20px !important;
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+    background-color: white;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+    border-radius: 4px;
+}
+
+.videos-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    margin-bottom: 10px;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+.videos-title {
+    font-size: 1.4rem;
+    font-weight: 700;
+    color: #0F1111;
+    margin-bottom: 0;
+}
+
+.videos-subtitle {
+    font-size: 0.9rem;
+    color: #565959;
+    padding-left: 10px;
+    margin-bottom: 15px;
+}
+
+.videos-carousel-container {
+    position: relative;
+    display: flex;
+    align-items: center;
+    padding: 0 50px; /* Space for arrows */
+}
+
+.videos-carousel-wrapper {
+    display: flex;
+    flex-wrap: nowrap;
+    overflow-x: hidden; /* Hide horizontal scrollbar */
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+    padding: 10px 0; /* Vertical padding */
+    flex-grow: 1;
+}
+
+.videos-carousel-wrapper::-webkit-scrollbar {
+    display: none;
+}
+
+.video-item-card {
+    flex: 0 0 auto;
+    width: 200px; /* Width for each video card */
+    margin: 0 8px;
+    text-align: left;
+    cursor: pointer;
+    background-color: #fff;
+    border-radius: 8px;
+    overflow: hidden; /* Ensures border-radius applies to content */
+    box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+    transition: all 0.2s ease-in-out;
+    display: flex;
+    flex-direction: column;
+}
+
+.video-item-card:hover {
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    transform: translateY(-2px);
+}
+
+.video-thumbnail-wrapper {
+    position: relative;
+    width: 100%;
+    padding-top: 56.25%; /* 16:9 Aspect Ratio */
+    overflow: hidden;
+    margin-bottom: 8px;
+}
+
+.video-thumbnail-wrapper img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+}
+
+.video-play-icon {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 3rem;
+    color: rgba(255, 255, 255, 0.9);
+    text-shadow: 0 0 5px rgba(0,0,0,0.5);
+}
+
+.video-duration {
+    position: absolute;
+    bottom: 5px;
+    right: 5px;
+    background-color: rgba(0,0,0,0.7);
+    color: #fff;
+    font-size: 0.75rem;
+    padding: 2px 5px;
+    border-radius: 3px;
+}
+
+.video-item-card .video-title {
+    font-size: 0.9rem;
+    color: #007185;
+    margin-bottom: 5px;
+    line-height: 1.3;
+    padding: 0 10px;
+    /* Limit text to two lines */
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    min-height: 36px; /* Adjust based on line-height and line-clamp */
+}
+
+.video-item-card .video-title:hover {
+    text-decoration: underline;
+}
+
+.video-item-card .video-creator {
+    font-size: 0.8rem;
+    color: #565959;
+    margin-bottom: 10px;
+    padding: 0 10px;
+}
+
+.video-item-card .creator-badge {
+    background-color: #888; /* Grey badge */
+    color: #fff;
+    font-weight: bold;
+    padding: 2px 4px;
+    border-radius: 3px;
+    font-size: 0.7em;
+    margin-right: 5px;
+}
+
+.upload-video-btn {
+    display: block;
+    margin: 20px auto 0; /* Center the button */
+    background-color: #f0f2f2;
+    border: 1px solid #adb1b8;
+    color: #0f1111;
+    font-size: 0.9rem;
+    padding: 8px 15px;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.2s, border-color 0.2s;
+}
+
+.upload-video-btn:hover {
+    background-color: #e4e6e6;
+    border-color: #bcbcbc;
+}
+
+/* Responsive adjustments for videos carousel */
+@media (max-width: 767.98px) {
+    .videos-carousel-container {
+        padding: 0 10px; /* Less padding for arrows on small screens */
+    }
+    .video-item-card {
+        width: 150px; /* Smaller card width for mobile */
+        margin: 0 5px;
+    }
+    .video-play-icon {
+        font-size: 2.5rem;
+    }
+    .video-title {
+        font-size: 0.8rem;
+    }
+    .video-creator {
+        font-size: 0.75rem;
+    }
+    .upload-video-btn {
+        width: auto;
+        padding: 6px 12px;
+        font-size: 0.8rem;
+    }
+}
+
+/* Product Information Section */
+.product-info-section {
+    background-color: #eaeded;
+    padding-bottom: 8px;
+    padding-top: 8px;
+    padding-left: 5px !important;
+    padding-right: 5px !important;
+    margin-top: 20px;
+    width: 100% !important;
+    height: 100% !important;
+}
+
+.product-info-section .section-cont {
+    padding-top: 20px !important;
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+    background-color: white;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+    border-radius: 4px;
+}
+
+.product-info-section .section-title {
+    font-size: 1.4rem;
+    font-weight: 700;
+    margin-bottom: 15px;
+    padding-left: 10px;
+    color: #0F1111;
+}
+
+.product-info-content {
+    padding: 0 10px 20px 10px;
+}
+
+.product-details-table {
+    border-right: 1px solid #e0e0e0; /* Separator for two columns */
+    padding-right: 20px;
+}
+
+.product-info-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 0.85rem;
+}
+
+.product-info-table th,
+.product-info-table td {
+    padding: 8px 0;
+    vertical-align: top;
+    border-bottom: 1px solid #eee;
+    text-align: left;
+}
+
+.product-info-table th {
+    font-weight: bold;
+    color: #565959;
+    width: 180px; /* Adjust width for labels */
+    padding-right: 15px;
+}
+
+.product-info-table td {
+    color: #0f1111;
+}
+
+.product-info-table tr:last-child th,
+.product-info-table tr:last-child td {
+    border-bottom: none;
+}
+
+.product-info-table .product-rating-meta {
+    font-size: 0.85rem;
+    display: flex;
+    align-items: center;
+}
+
+.product-info-table .product-rating-meta i {
+    font-size: 0.9rem;
+    color: #f5c453;
+    margin-right: 2px;
+}
+.product-info-table .product-rating-meta .rating-value {
+    font-weight: bold;
+    margin-left: 3px;
+    color: #007185;
+}
+.product-info-table .product-rating-meta .reviews-count {
+    font-weight: normal;
+    margin-left: 5px;
+    color: #007185;
+}
+.product-info-table .product-rating-meta .reviews-count a {
+    color: #007185;
+    text-decoration: none;
+}
+.product-info-table .product-rating-meta .reviews-count a:hover {
+    text-decoration: underline;
+}
+
+.product-details-table td a {
+    color: #007185;
+    text-decoration: none;
+}
+.product-details-table td a:hover {
+    text-decoration: underline;
+}
+
+
+/* Warranty & Feedback Section (Right column of Product Information) */
+.warranty-feedback-section {
+    padding-left: 20px;
+}
+
+.warranty-feedback-section h3 {
+    font-size: 1.1rem;
+    font-weight: 700;
+    margin-bottom: 10px;
+    color: #0F1111;
+}
+
+.warranty-feedback-section p {
+    font-size: 0.85rem;
+    color: #565959;
+    margin-bottom: 10px;
+    line-height: 1.4;
+}
+
+.warranty-feedback-section p a {
+    color: #007185;
+    text-decoration: none;
+}
+.warranty-feedback-section p a:hover {
+    text-decoration: underline;
+}
+
+.feedback-section i {
+    font-size: 0.75rem;
+    margin-left: 5px;
+    vertical-align: middle;
+}
+
+/* Product Description Full Section */
+.product-description-full-section {
+    background-color: #eaeded;
+    padding-bottom: 8px;
+    padding-top: 8px;
+    padding-left: 5px !important;
+    padding-right: 5px !important;
+    margin-top: 20px;
+    width: 100% !important;
+    height: 100% !important;
+}
+
+.product-description-full-section .section-cont {
+    padding-top: 20px !important;
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+    background-color: white;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+    border-radius: 4px;
+}
+
+.product-description-full-section .section-title {
+    font-size: 1.4rem;
+    font-weight: 700;
+    margin-bottom: 15px;
+    padding-left: 10px;
+    color: #0F1111;
+}
+
+.product-description-full-section .description-text {
+    font-size: 0.9rem;
+    color: #0f1111;
+    line-height: 1.5;
+    padding: 0 20px 20px 20px;
+}
+
+
+/* Brands in this category on Amazon */
+.product-brand-category-section {
+    background-color: #eaeded;
+    padding-bottom: 8px;
+    padding-top: 8px;
+    padding-left: 5px !important;
+    padding-right: 5px !important;
+    margin-top: 20px;
+    width: 100% !important;
+    height: 100% !important;
+}
+
+.product-brand-category-section .section-cont {
+    padding-top: 20px !important;
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+    background-color: white;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+    border-radius: 4px;
+}
+
+.product-brand-category-section .section-title {
+    font-size: 1.4rem;
+    font-weight: 700;
+    margin-bottom: 15px;
+    padding-left: 10px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: #0F1111;
+}
+
+.product-brand-category-section .sponsored-tag {
+    font-size: 0.8rem;
+    color: #888;
+    font-weight: normal;
+}
+.product-brand-category-section .sponsored-tag i {
+    font-size: 0.7rem;
+}
+
+
+.brand-category-grid-container {
+    position: relative;
+    display: flex;
+    align-items: center;
+    padding: 0 50px; /* Space for arrows */
+}
+
+.brand-category-grid-wrapper {
+    display: flex;
+    flex-wrap: nowrap;
+    overflow-x: hidden;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+    padding: 10px 0;
+    flex-grow: 1;
+    justify-content: space-between; /* Distribute items with space */
+}
+
+.brand-category-grid-wrapper::-webkit-scrollbar {
+    display: none;
+}
+
+.brand-category-item {
+    flex: 0 0 auto;
+    width: 200px; /* Width of each brand item */
+    margin: 0 8px; /* Margin between items */
+    padding: 15px 10px;
+    text-align: center;
+    border: 1px solid #f0f0f0;
+    border-radius: 4px;
+    background-color: #fff;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+    transition: all 0.2s ease-in-out;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.brand-category-item:hover {
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    transform: translateY(-2px);
+}
+
+.brand-category-item img {
+    max-width: 150px; /* Max width for brand logos */
+    max-height: 80px; /* Max height for brand logos */
+    object-fit: contain;
+    margin-bottom: 10px;
+}
+
+.brand-category-item h5 {
+    font-size: 0.95rem;
+    font-weight: bold;
+    color: #0F1111;
+    margin-bottom: 0;
+}
+
+/* Carousel arrows (re-use from product carousel but adjust for specific sections) */
+/* The general carousel-arrow styling should already be in your CSS.
+   We just need to ensure it applies to the new brand carousel as well.
+   Make sure the `carousel-arrow` class itself is defined globally enough.
+   If not, you might need to duplicate it or refine its scope.
+*/
+/* Example of how to ensure arrows work for new carousels */
+/* .brand-category-grid-container .carousel-arrow,
+.videos-carousel-container .carousel-arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(255, 255, 255, 0.85);
+    border: 1px solid #ddd;
+    width: 45px;
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    z-index: 10;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+    font-size: 1.4rem;
+    color: #0F1111;
+    transition: background-color 0.2s, border-color 0.2s;
+    border-radius: 4px;
+} */
+/* Ensure the above is not duplicated if `carousel-arrow` is already broadly defined */
+
+/* Responsive adjustments for Product Information Section */
+@media (max-width: 991.98px) { /* For tablets */
+    .product-details-table {
+        border-right: none;
+        border-bottom: 1px solid #e0e0e0; /* Add bottom border on smaller screens */
+        margin-bottom: 20px;
+        padding-bottom: 20px;
+        padding-right: 10px; /* Adjust padding for full width */
+    }
+    .warranty-feedback-section {
+        padding-left: 10px; /* Adjust padding for full width */
+    }
+}
+
+@media (max-width: 767.98px) { /* For mobile phones */
+    .product-info-table th {
+        width: 120px; /* Smaller width for labels on very small screens */
+        font-size: 0.75rem;
+    }
+    .product-info-table td {
+        font-size: 0.75rem;
+    }
+    .warranty-feedback-section h3 {
+        font-size: 1rem;
+    }
+    .warranty-feedback-section p {
+        font-size: 0.75rem;
+    }
+    .product-description-full-section .description-text {
+        font-size: 0.85rem;
+        padding: 0 15px 15px 15px;
+    }
+    .brand-category-item {
+        width: 150px; /* Smaller width for brand items on mobile */
+        margin: 0 5px;
+        padding: 10px;
+    }
+    .brand-category-item img {
+        max-width: 120px;
+        max-height: 60px;
+    }
+    .brand-category-item h5 {
+        font-size: 0.85rem;
+    }
+    .brand-category-grid-container {
+        padding: 0 10px; /* Less padding for arrows on small screens */
+    }
+}
+
+/* Customer Reviews Section */
+.customer-reviews-section {
+    background-color: #eaeded;
+    padding-bottom: 8px;
+    padding-top: 8px;
+    padding-left: 5px !important;
+    padding-right: 5px !important;
+    margin-top: 20px;
+    width: 100% !important;
+    height: 100% !important;
+}
+
+.customer-reviews-section .section-cont {
+    padding-top: 20px !important;
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+    background-color: white;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+    border-radius: 4px;
+}
+
+.customer-reviews-section .section-title {
+    font-size: 1.4rem;
+    font-weight: 700;
+    margin-bottom: 15px;
+    padding-left: 10px;
+    color: #0F1111;
+}
+
+.review-summary-top-row {
+    padding: 0 20px 20px 20px; /* Adjust padding for inner content */
+}
+
+/* Customer Rating Overall (Left Column) */
+.customer-rating-overall {
+    border-right: 1px solid #e0e0e0;
+    padding-right: 20px;
+}
+
+.customer-rating-overall .large-rating .product-rating-meta {
+    font-size: 1.2rem;
+    color: #007185;
+    display: flex;
+    align-items: center;
+    margin-bottom: 5px;
+}
+.customer-rating-overall .large-rating .product-rating-meta i {
+    font-size: 1.3rem;
+    color: #f5c453;
+    margin-right: 5px;
+}
+.customer-rating-overall .large-rating .rating-value {
+    font-weight: bold;
+    margin-left: 5px;
+    color: #0F1111;
+}
+
+.customer-rating-overall .total-ratings {
+    font-size: 0.85rem;
+    color: #565959;
+    margin-left: 10px; /* Align with rating value */
+    margin-bottom: 15px;
+}
+
+.rating-bars {
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+.rating-bar-row {
+    display: flex;
+    align-items: center;
+    margin-bottom: 5px;
+}
+.rating-bar-row .rating-label {
+    font-size: 0.85rem;
+    color: #007185;
+    width: 60px; /* Fixed width for labels */
+    text-align: right;
+    margin-right: 10px;
+    flex-shrink: 0;
+}
+.rating-bar-row .rating-label:hover {
+    text-decoration: underline;
+}
+.rating-bar-row .progress {
+    flex-grow: 1;
+    height: 10px;
+    border-radius: 5px;
+    background-color: #e0e0e0;
+}
+.rating-bar-row .progress-bar {
+    background-color: #f0c14b !important; /* Amazon yellow */
+}
+.rating-bar-row .rating-percentage {
+    font-size: 0.85rem;
+    color: #007185;
+    margin-left: 10px;
+    width: 40px; /* Fixed width for percentage */
+    text-align: left;
+    flex-shrink: 0;
+}
+.rating-bar-row .rating-percentage:hover {
+    text-decoration: underline;
+}
+
+.how-customer-reviews-work {
+    font-size: 0.85rem;
+    color: #007185;
+    text-decoration: none;
+    display: block;
+    margin-top: 15px;
+    margin-left: 10px;
+}
+.how-customer-reviews-work:hover {
+    text-decoration: underline;
+}
+
+.review-product-prompt {
+    border-top: 1px solid #e0e0e0;
+    padding-top: 20px;
+    margin-top: 20px;
+    text-align: center;
+}
+.review-product-prompt h5 {
+    font-size: 1.1rem;
+    font-weight: bold;
+    margin-bottom: 5px;
+    color: #0F1111;
+}
+.review-product-prompt p {
+    font-size: 0.85rem;
+    color: #565959;
+    margin-bottom: 10px;
+}
+.write-review-btn {
+    border-color: #adb1b8;
+    background-color: #f0f2f2;
+    color: #0f1111;
+    font-size: 0.9rem;
+    font-weight: normal;
+    padding: 8px 15px;
+}
+.write-review-btn:hover {
+    background-color: #e4e6e6;
+    border-color: #bcbcbc;
+}
+
+
+/* Reviews with Images Section (Right Column) */
+.reviews-with-images-section {
+    padding-left: 20px;
+}
+
+.reviews-with-images-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    margin-bottom: 10px;
+}
+.reviews-with-images-header .section-title {
+    margin-bottom: 0; /* Override default margin */
+}
+
+.see-all-photos {
+    font-size: 0.85rem;
+    color: #007185;
+    text-decoration: none;
+}
+.see-all-photos:hover {
+    text-decoration: underline;
+}
+.see-all-photos i {
+    font-size: 0.75rem;
+    margin-left: 5px;
+    vertical-align: middle;
+}
+
+.review-images-carousel-container {
+    position: relative;
+    display: flex;
+    align-items: center;
+    padding: 0 40px; /* Adjust padding for smaller images/arrows */
+    margin-bottom: 20px;
+}
+
+.review-images-carousel-wrapper {
+    display: flex;
+    flex-wrap: nowrap;
+    overflow-x: hidden;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+    padding: 10px 0;
+    flex-grow: 1;
+    gap: 10px; /* Gap between image cards */
+}
+.review-images-carousel-wrapper::-webkit-scrollbar {
+    display: none;
+}
+
+.review-image-card {
+    flex: 0 0 auto;
+    width: 120px; /* Fixed width for review images */
+    height: 120px; /* Fixed height for review images */
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    background-color: #fff;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+    transition: all 0.2s ease-in-out;
+}
+.review-image-card:hover {
+    border-color: #f0c14b;
+    box-shadow: 0 0 0 2px #f0c14b;
+}
+.review-image-card img {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+}
+
+/* Individual Review Cards */
+.top-review-card {
+    border-bottom: 1px solid #e0e0e0;
+    padding-bottom: 20px;
+    margin-bottom: 20px;
+}
+.top-review-card:last-of-type {
+    border-bottom: none;
+    margin-bottom: 0;
+}
+
+.top-review-card .reviewer-info {
+    margin-bottom: 10px;
+}
+.top-review-card .reviewer-name {
+    font-weight: bold;
+    color: #0F1111;
+    font-size: 0.9rem;
+    margin-bottom: 5px;
+}
+.top-review-card .review-rating-meta {
+    display: flex;
+    align-items: center;
+    font-size: 0.95rem;
+    color: #007185;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+.top-review-card .review-rating-meta i {
+    color: #f5c453;
+    margin-right: 2px;
+    font-size: 1rem;
+}
+
+.top-review-card .review-meta,
+.top-review-card .review-style-verified {
+    font-size: 0.8rem;
+    color: #565959;
+    margin-bottom: 3px;
+}
+.top-review-card .verified-purchase-badge {
+    color: #c45500;
+    font-weight: bold;
+}
+
+.review-text {
+    font-size: 0.9rem;
+    color: #0f1111;
+    line-height: 1.5;
+    margin-bottom: 10px;
+    overflow: hidden;
+    /* transition: max-height 0.3s ease-out; */ /* Controlled by JS for animation */
+}
+.review-text.collapsed-review-text {
+    max-height: 50px; /* Default collapsed height for reviews */
+}
+
+.read-more-review-toggle {
+    font-size: 0.9rem;
+    color: #007185;
+    cursor: pointer;
+    display: block;
+    margin-bottom: 10px;
+    text-decoration: none;
+}
+.read-more-review-toggle:hover {
+    text-decoration: underline;
+}
+
+.helpful-count {
+    font-size: 0.8rem;
+    color: #565959;
+    margin-bottom: 10px;
+}
+
+.review-actions {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+.review-actions .helpful-btn {
+    background-color: #f0f2f2;
+    border: 1px solid #adb1b8;
+    color: #0f1111;
+    font-size: 0.8rem;
+    padding: 3px 10px;
+    border-radius: 4px;
+    cursor: pointer;
+}
+.review-actions .helpful-btn:hover {
+    background-color: #e4e6e6;
+    border-color: #bcbcbc;
+}
+.review-actions .separator {
+    color: #ccc;
+    font-size: 0.8rem;
+}
+.review-actions .report-link {
+    font-size: 0.8rem;
+    color: #007185;
+    text-decoration: none;
+}
+.review-actions .report-link:hover {
+    text-decoration: underline;
+}
+
+.translate-reviews-btn,
+.translate-review-btn {
+    background-color: #f0f2f2;
+    border: 1px solid #adb1b8;
+    color: #0f1111;
+    font-size: 0.9rem;
+    padding: 8px 15px;
+    border-radius: 4px;
+    cursor: pointer;
+    display: block; /* Make it a block element to take full width or adjust with margin auto */
+    width: fit-content; /* Adjust width to content */
+    margin-top: 15px;
+    margin-bottom: 20px;
+}
+.translate-reviews-btn:hover,
+.translate-review-btn:hover {
+    background-color: #e4e6e6;
+    border-color: #bcbcbc;
+}
+.translate-review-btn {
+    margin-left: 0;
+    margin-right: auto; /* Align to left */
+}
+
+.see-more-reviews {
+    font-size: 1rem;
+    font-weight: bold;
+    color: #007185;
+    text-decoration: none;
+    display: block;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    padding-left: 10px;
+}
+.see-more-reviews:hover {
+    text-decoration: underline;
+}
+.see-more-reviews i {
+    font-size: 0.9rem;
+    vertical-align: middle;
+}
+
+
+/* Responsive adjustments for Customer Reviews Section */
+@media (max-width: 991.98px) { /* Tablets and smaller */
+    .customer-rating-overall {
+        border-right: none;
+        border-bottom: 1px solid #e0e0e0;
+        margin-bottom: 20px;
+        padding-bottom: 20px;
+        padding-right: 10px;
+        text-align: center; /* Center content on smaller screens */
+    }
+    .customer-rating-overall .large-rating .product-rating-meta {
+        justify-content: center; /* Center stars */
+        margin-left: 0;
+    }
+    .customer-rating-overall .total-ratings {
+        margin-left: 0; /* Center text */
+    }
+    .rating-bar-row .rating-label {
+        text-align: left;
+        width: auto;
+    }
+    .rating-bar-row .rating-percentage {
+        width: auto;
+    }
+    .how-customer-reviews-work {
+        text-align: center;
+        margin-left: 0;
+    }
+    .reviews-with-images-section {
+        padding-left: 10px;
+    }
+    .reviews-with-images-header {
+        flex-direction: column; /* Stack title and "see all" link */
+        align-items: flex-start;
+    }
+    .reviews-with-images-header .see-all-photos {
+        margin-top: 5px;
+        margin-bottom: 10px;
+    }
+    .review-images-carousel-container {
+        padding: 0 10px;
+    }
+}
+
+@media (max-width: 767.98px) { /* Mobile phones */
+    .customer-reviews-section .section-title {
+        font-size: 1.2rem;
+    }
+    .customer-rating-overall .large-rating .product-rating-meta {
+        font-size: 1rem;
+    }
+    .customer-rating-overall .large-rating .product-rating-meta i {
+        font-size: 1.1rem;
+    }
+    .review-image-card {
+        width: 100px; /* Smaller review images on very small screens */
+        height: 100px;
+    }
+    .top-review-card .reviewer-name {
+        font-size: 0.8rem;
+    }
+    .top-review-card .review-rating-meta {
+        font-size: 0.85rem;
+    }
+    .top-review-card .review-meta,
+    .top-review-card .review-style-verified {
+        font-size: 0.7rem;
+    }
+    .review-text, .read-more-review-toggle, .helpful-count,
+    .review-actions .helpful-btn, .review-actions .report-link,
+    .translate-reviews-btn, .translate-review-btn {
+        font-size: 0.75rem;
+        padding: 5px 8px; /* Smaller padding for buttons */
+    }
+    .write-review-btn {
+        padding: 6px 12px;
+        font-size: 0.8rem;
+    }
+    .see-more-reviews {
+        font-size: 0.9rem;
+    }
+}
