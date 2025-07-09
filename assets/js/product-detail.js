@@ -123,6 +123,10 @@ document.addEventListener("DOMContentLoaded", function() {
     // --- Variant Selector (Color/Style) ---
     const variantItems = document.querySelectorAll('.style-variants .variant-item');
     const mainProductImageForVariants = document.getElementById('main-product-image'); // Dapatkan lagi referensi gambar utama
+    const techColorSpan = document.getElementById('tech-color'); // Dapatkan referensi span untuk warna teknis
+    const priceProduct = document.getElementById('price-product'); // Dapatkan referensi span untuk warna teknis
+    const productBuyPrice = document.getElementById('product-buy-price'); // Dapatkan referensi span untuk harga beli produk
+
 
     if (variantItems.length > 0 && mainProductImageForVariants) {
         variantItems.forEach(item => {
@@ -134,6 +138,10 @@ document.addEventListener("DOMContentLoaded", function() {
                 const optionValueSpan = document.querySelector('.product-style-options .option-value');
                 if (optionValueSpan) {
                     optionValueSpan.textContent = this.dataset.variantName; // Ambil dari data-variant-name
+                    techColorSpan.textContent = this.dataset.variantName;
+                    priceProduct.textContent = this.dataset.variantPrice; // Ambil dari data-variant-price
+                    productBuyPrice.textContent = this.dataset.variantPrice; // Ambil dari data-variant-price
+
                 }
                 
                 // Change the main product image based on the selected variant
